@@ -1,0 +1,457 @@
+@import 'o-colors/main';
+
+$font-sans: MetricWeb, sans-serif;
+$font-serif: Georgia, serif;
+$font-display: FinancierDisplayWeb, Georgia, serif;
+
+body {
+  @include oColorsFor(page, background);
+  margin: 0;
+  border: 0;
+  font-family: $font-sans;
+}
+
+.o-header{
+  &--light {
+    border-bottom: 1px solid #e9decf;
+  }
+}
+
+$share-button-size: 38px;
+.o-share--muted {
+  .o-share__action {
+    line-height: $share-button-size;
+
+    a {
+      width: $share-button-size;
+      &:hover {
+      }
+    }
+
+    i {
+      width: $share-button-size;
+      height: $share-button-size;
+      text-indent: $share-button-size;
+      border: 1px solid #e9decf;
+      &:hover {
+        opacity: 1;
+        background-color: #e9decf;
+      }
+    }
+
+    &--twitter i {
+      background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMTMgLTEwMyA0MCA0MCI+PHBhdGggZmlsbD0iI2E3YTU5YiIgZD0iTS04MS44NjItODkuNzg2Yy0uODIuMzU3LTEuNy42LTIuNjI0LjcwOC45NDMtLjU1NiAxLjY2OC0xLjQzNiAyLjAxLTIuNDgzLS44ODMuNTEtMS44NjIuODgtMi45MDIgMS4wOC0uODMzLS44Ny0yLjAyLTEuNDItMy4zMzctMS40Mi0yLjUyMyAwLTQuNTcgMi4wMS00LjU3IDQuNDkgMCAuMzUuMDQuNjkuMTE4IDEuMDItMy44LS4xOS03LjE2Ny0xLjk3OC05LjQyLTQuNjktLjM5NC42Ni0uNjIgMS40My0uNjIgMi4yNiAwIDEuNTUuODA3IDIuOTMgMi4wMzMgMy43My0uNzUtLjAyNS0xLjQ1NC0uMjI4LTIuMDctLjU2di4wNTRjMCAyLjE3NiAxLjU3MyAzLjk5IDMuNjY3IDQuNC0uMzg0LjEwNC0uNzkuMTYtMS4yMDQuMTYtLjMgMC0uNTgtLjAyNy0uODYtLjA4LjU4IDEuNzgyIDIuMjcgMy4wOCA0LjI3IDMuMTE2LTEuNTcgMS4yMDUtMy41NCAxLjkyMy01LjY4IDEuOTIzLS4zNyAwLS43NC0uMDI2LTEuMDktLjA2NyAyLjAyIDEuMjcyIDQuNDIgMi4wMTUgNyAyLjAxNSA4LjQgMCAxMy02Ljg0IDEzLTEyLjc3IDAtLjE5NC0uMDA3LS4zOS0uMDE4LS41OC44OS0uNjMzIDEuNjY1LTEuNDI1IDIuMjgtMi4zMjV6Ii8+PC9zdmc+)
+    }
+
+    &--facebook i {
+      background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMTQgLTEwNSA0MCA0MCI+PHBhdGggZmlsbD0iI2E3YTU5YiIgZD0iTS05Ny05MS40NHYyLjk1aC0yLjE3djMuNjJILTk3djEwLjcyaDQuNDN2LTEwLjcyaDNzLjI2LTEuNzMuNC0zLjYyaC0zLjM4di0yLjQ3YzAtLjM3LjUtLjg3Ljk2LS44N2gyLjQzdi0zLjc1aC0zLjI4Yy00LjY2IDAtNC41NSAzLjYzLTQuNTUgNC4xNnoiLz48L3N2Zz4=)
+    }
+  }
+}
+
+.article {
+  &-head {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    .o-share--vertical {
+      float: right;
+      .o-share__action {
+        margin: 0 0 0 5px;
+        a,
+        a:first-child {
+          padding-top: 0;
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+#bond-interactive {
+
+  .ft-chart {
+    min-height: 400px;
+  }
+
+  img {
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  .step {
+    margin: 3em auto;
+    width: 100%;
+  }
+
+  .step:first-of-type {
+    margin-top: 0;
+  }
+
+  h3 {
+    font-family: MetricWeb, sans-serif;
+    margin-top: 2em;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+
+  svg {
+    overflow: visible;
+
+    .path {
+        stroke-width: 1px;
+        stroke: #c3bcb0;
+        fill: none;
+        stroke-linejoin: round;
+    }
+
+    .yAxis.yAxisCap text {
+        text-anchor: end !important;
+    }
+
+    .yAxis path.domain {
+        stroke: none;
+    }
+
+    .axisLabel {
+        font-size: 14px;
+    }
+
+    text {
+        fill: #6b6e68;
+        font-size: 14px;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .yAxis .tick line {
+        opacity: 1;
+        stroke: #C3BCB0;
+        stroke-dasharray: 1 2;
+    }
+
+    .xAxis .tick line {
+        opacity: 1;
+        stroke: #C3BCB0;
+    }
+
+    .annotationLabel {
+      font-size: 16px;
+    }
+  }
+
+  #interest-rates-chart {
+    margin-top: 3em;
+  }
+
+  .bar-graphic {
+    width: 100%;
+    margin: 5em auto;
+    position: relative;
+
+    $barHeight: 50px;
+
+    &:before {
+      content: "Bond value";
+      position: absolute;
+      top: 2.5em;
+      text-align: left;
+    }
+
+    .pf-liability {
+      width: 12%;
+      height: $barHeight;
+      border: 1px solid #BB6D82;
+      border: 1px solid #BB6D82;
+      margin-bottom: 1em;
+      margin-left: 76%;
+      position: relative;
+    }
+
+    .pf-liability:before {
+      content: "$16m";
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      line-height: $barHeight;
+      font-size: 1.5em;
+    }
+
+    .pf-liability:after {
+      content: "Needed to fund pensions";
+      position: absolute;
+      width: 200%;
+      top: -2.3em;
+      line-height: 1em;
+      font-size: 1em;
+    }
+
+    .pf-bar {
+      margin-bottom: 1em;
+      position: relative;
+    }
+
+    .pf-bar:last-of-type:after {
+      content: "Shortfall: $14.5m/year";
+      position: absolute;
+      width: 12%;
+      right: 12%;
+      bottom: -2.2em;
+      text-align: center;
+    }
+
+    .pf-principle {
+      width: 75%;
+      height: $barHeight;
+      background: #BB6D82;
+      border: 1px solid #BB6D82;
+      display: inline-block;
+    }
+
+    .pf-principle:before {
+      content: "$100m";
+      position: absolute;
+      width: 75%;
+      text-align: center;
+      line-height: $barHeight;
+      font-size: 1.5em;
+    }
+
+    .pf-interest {
+      height: $barHeight;
+      border: 1px solid #ECAFAF;
+      background: #ECAFAF;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .pf-interest-16 {
+      width: 12%;
+    }
+
+    .pf-interest-16:after {
+      content: "16% interest rate";
+      position: absolute;
+      left: 90%;
+      width: 10%;
+    }
+
+    .pf-interest-16-dotted {
+      width: 12%;
+      background: none;
+      border: 1px dotted #ECAFAF;
+    }
+
+    .pf-interest-1point5 {
+      width: 9.3%;
+      margin-left: -1px;
+    }
+
+    .pf-interest-1point5:after {
+      content: "1.5% interest rate";
+      position: absolute;
+      left: 90%;
+      width: 10%;
+    }
+  }
+
+  .bar-graphic-second {
+    .pf-bar:last-of-type:after {
+      content: "";
+    }
+
+    .pf-bar-second {
+      .pf-principle {
+        height: 500px;
+      }
+
+      .pf-principle:before {
+        content: "$1.07bn";
+      }
+
+      .pf-interest-1point5 {
+        width: 100%;
+        margin-left: -1px;
+      }
+    }
+  }
+
+  #compare-pds {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px 0 #cec6b9;
+    padding-top: 1em;
+    margin: 2em 0 1em 0;
+    text-align: center;
+
+    h2 {
+      margin-top: 0.5em;
+      margin-bottom: 0;
+      text-align: left;
+      padding: 0 0.83em;
+    }
+
+    #instructions {
+      text-align: left;
+      padding: 1em;
+      font-family: MetricWeb, sans-serif;
+      color: #333;
+    }
+
+    .key {
+      font-family: MetricWeb, sans-serif;
+      // padding: 0.10em 0.5em 0.20em 0.5em;
+      // border-radius: 3px;
+      // font-size: 1.2em;
+      font-weight: 600;
+    }
+
+    #key-country {
+      color: #d7706c;
+    }
+
+    #key-company {
+      color: #3d7ab3;
+    }
+
+    .interactive-sentence {
+      margin: 1em 0;
+      font-family: MetricWeb, sans-serif;
+      font-size: 1.2em;
+      line-height: 3em;
+    }
+
+    .interactive-option {
+      padding: 0.25em 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      color: #AAA;
+      cursor: pointer;
+
+      &[aria-pressed=true] {
+        background: #27757b;
+        border-color: #27757b;
+        color: white;
+      }
+    }
+
+    #interactive-result {
+      color: #333;
+      font-weight: 600;
+      font-size: 1.5em;
+      line-height: 1em;
+
+      .multiplier {
+        font-size: 3.5em;
+        margin-top: 0.4em;
+        margin-bottom: -0.4em;
+      }
+    }
+    #thanhack {
+      display: block;
+      margin-top: -1.3em;
+    }
+
+    #interactive-compare-text {
+      width: 100%;
+      word-wrap: break-word;
+      color: #3d7ab3;
+      font-weight: 600;
+      font-size: 2em;
+      line-height: 1.2em;
+      margin-top: -1.7em;
+      vertical-align: top;
+      text-align: center;
+    }
+
+    #interactive-compare-text.item-country {
+      color: #d7706c;
+    }
+
+    #interactive-compare-text.item-company {
+      color: #3d7ab3;
+    }
+
+    #interactive-unit {
+      margin-top: -0.5em;
+    }
+
+    #error {
+      color: red;
+      display: block;
+      font-size: 0.8em;
+      display: none;
+    }
+
+    #tweetable {
+      display: none;
+    }
+
+    button {
+      margin-bottom: 3em;
+    }
+
+    input {
+      width: 200px;
+    }
+
+    .sourceline {
+      margin-top: 4em;
+      padding-bottom: 1em;
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+  }
+}
+
+aside {
+  margin: 3em auto;
+}
+
+.sourceline {
+  color: #777;
+  font-size: 14px;
+  text-align: left;
+}
+
+@media (max-width: 500px) {
+
+  #bond-interactive {
+    .bar-graphic {
+      width: 90%;
+      margin-left: 0;
+      margin-right: 0;
+
+      .pf-liability:before {
+        left: -25%;
+      }
+
+      .pf-liability:after {
+        width: 300%;
+      }
+
+      .pf-interest-16:after {
+        left: 93%;
+      }
+
+      .pf-interest-1point5:after {
+        left: 93%;
+      }
+
+      .pf-bar:last-of-type:after {
+          width: 15%;
+          bottom: -2.5em;
+      }
+    }
+
+    #compare-pds {
+      #interactive-compare-text {
+        font-weight: 600;
+        font-size: 1.5em;
+        line-height: 1.2em;
+        // margin-top: 0.2em;
+        vertical-align: top;
+      }
+    }
+  }
+}

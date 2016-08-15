@@ -1,0 +1,34 @@
+<script inline async src="scripts/analytics.js"></script>
+{% filter spoorTrackingPixel %}
+{
+    "action": "view",
+    "category": "page",
+    "context": {
+        "content": {
+            "asset_type": "interactive"
+            {%if id %},"uuid": "{{ id }}"{% endif %}
+        },
+        "product": "IG"
+        {% if tracking.micrositeName %} ,"microsite_name": "{{ tracking.micrositeName }}" {% endif %}
+    },
+    "system": {
+        "is_live": {{ "true" if flags.prod else "false" }},
+        "apiKey": "qUb9maKfKbtpRsdp0p2J7uWxRPGJEP",
+        "source": "o-tracking-ns",
+        "version": "1.0.0"
+    }
+}
+{% endfilter %}
+{% if flags.googleAnalytics %}
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-35229645-1', 'auto');
+  ga('require','displayfeatures');
+  ga('send', 'pageview');
+</script>
+
+<script>(function(){function init(){var oTracking=Origami['o-tracking'];oTracking.init({server:'https://spoor-api.ft.com/px.gif',system:{is_live:true},context:{product:'IG'}});oTracking.link.init();oTracking.page({"content":{"asset_type":"interactive","uuid":"3e17efac-68bd-11e6-ae5b-a7cc5dd5a28c"}});}var o=document.createElement('script');o.async=o.defer=true;o.src='https://origami-build.ft.com/v2/bundles/js?modules=o-tracking';var s=document.getElementsByTagName('script')[0];if(o.hasOwnProperty('onreadystatechange')){o.onreadystatechange=function(){if(o.readyState==='loaded'){init();}};}else{o.onload=init;}s.parentNode.insertBefore(o,s);}());</script><noscript data-o-component="o-tracking"><img src="https://spoor-api.ft.com/px.gif?data=%7B%22action%22%3A%22view%22%2C%22category%22%3A%22page%22%2C%22context%22%3A%7B%22content%22%3A%7B%22asset_type%22%3A%22interactive%22%2C%22uuid%22%3A%223e17efac-68bd-11e6-ae5b-a7cc5dd5a28c%22%7D%2C%22product%22%3A%22IG%22%7D%2C%22system%22%3A%7B%22is_live%22%3Atrue%2C%22apiKey%22%3A%22qUb9maKfKbtpRsdp0p2J7uWxRPGJEP%22%2C%22source%22%3A%22o-tracking-ns%22%2C%22version%22%3A%221.0.0%22%7D%7D" height="1" width="1" /></noscript>
+{% endif %}

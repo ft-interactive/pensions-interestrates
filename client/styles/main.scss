@@ -68,8 +68,21 @@ $share-button-size: 38px;
 }
 
 #bond-interactive {
+
+  img {
+    width: 100%;
+  }
+
   .step {
     margin: 3em auto;
+    width: 100%;
+    // height: 400px;
+  }
+
+  #step1 {
+    width: 100%;
+    height: 20px;
+    background: #A5526A;
   }
 }
 

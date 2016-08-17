@@ -114,6 +114,33 @@ function drawBondData(bondData) {
     .style('stroke', '#BB6D82')
     .style('stroke-width', '2')
     .style('fill', 'none');
+
+  const annotationGroup = svg.append('g')
+    .attr('class', 'annotationGroup')
+    .attr('transform', `translate(0,${margins.top})`);
+
+  // label us treasury yield
+  annotationGroup.append('text')
+    .attr('class', 'annotationLabel')
+    .attr('x', xScale(parseDate('1/1/80')))
+    .attr('y', yScale(16.7))
+    .style('fill', '#BB6D82')
+    .text('US 10-year Treasury yield');
+
+  // label uk
+  annotationGroup.append('text')
+    .attr('class', 'annotationLabel')
+    .attr('x', xScale(parseDate('1/1/91')))
+    .attr('y', yScale(12.5))
+    .text('UK 10-year gilt yield');
+
+  // label german
+  annotationGroup.append('text')
+    .attr('class', 'annotationLabel')
+    .attr('x', xScale(parseDate('1/1/90')))
+    .attr('y', yScale(5.1))
+    .style('text-anchor', 'end')
+    .text('German bund yield');
 }
 
 function drawCharts(error, bondData) {

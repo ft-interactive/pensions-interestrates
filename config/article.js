@@ -87,4 +87,10 @@ export default _ => ({ // eslint-disable-line
     */
     // product: '',
   },
+
+  scripts: [
+    'scripts/d3.v4.min.js',
+    'scripts/queue.js',
+    'scripts/drawCharts.js'
+  ],
 });

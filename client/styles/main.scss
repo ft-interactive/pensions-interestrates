@@ -83,11 +83,19 @@ $share-button-size: 38px;
     width: 100%;
   }
 
-  #graphic1 {
+  .bar-graphic {
     width: 100%;
-    margin: 3em auto 4em auto;
+    margin: 5em auto;
+    position: relative;
 
     $barHeight: 50px;
+
+    &:before {
+      content: "Label goes here";
+      position: absolute;
+      top: 2.5em;
+      text-align: left;
+    }
 
     .pf-liability {
       width: 12%;
@@ -153,6 +161,7 @@ $share-button-size: 38px;
       border: 1px solid #ECAFAF;
       background: #ECAFAF;
       display: inline-block;
+      vertical-align: top;
     }
 
     .pf-interest-16 {
@@ -182,6 +191,27 @@ $share-button-size: 38px;
       position: absolute;
       left: 90%;
       width: 10%;
+    }
+  }
+
+  .bar-graphic-second {
+    .pf-bar:last-of-type:after {
+      content: "";
+    }
+
+    .pf-bar-second {
+      .pf-principle {
+        height: 500px;
+      }
+
+      .pf-principle:before {
+        content: "$1.1bn";
+      }
+
+      .pf-interest-1point5 {
+        width: 100%;
+        margin-left: -1px;
+      }
     }
   }
 }

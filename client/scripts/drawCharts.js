@@ -1,23 +1,25 @@
-console.log(d3);
+/* global d3, queue */
 
-d3.queue()
-  .defer(d3.tsv, 'data/bonddata.tsv')
-  .await(drawCharts);
+console.log('hi');
 
-var windowWidth = window.innerWidth;
+let windowWidth = window.innerWidth;
+
+function drawBondData(bondData) {
+  console.log(bondData);
+}
 
 function drawCharts(error, bondData) {
-  drawBondData(bondData)
+  drawBondData(bondData);
 
-  d3.select(window).on('resize',function(){
-    if (Math.abs(window.innerWidth-windowWidth) > 10) {
+  d3.select(window).on('resize', () => {
+    if (Math.abs(window.innerWidth - windowWidth) > 10) {
       windowWidth = window.innerWidth;
 
-      drawBondData(bondData)
+      drawBondData(bondData);
     }
   });
 }
 
-function drawBondData(bondData) {
-	console.log(bondData);
-}
+queue()
+  .defer(d3.tsv, 'data/bonddata.tsv')
+  .await(drawCharts);

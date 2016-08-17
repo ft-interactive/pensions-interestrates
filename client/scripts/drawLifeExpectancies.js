@@ -1,11 +1,11 @@
-function drawBondData(bondData, windowWidth) {
-  const parseDate = d3.timeParse('%-m/%-d/%y');
+function drawLifeExpectancies(lifeExpectanciesData, windowWidth) {
+  const parseDate = d3.timeParse('%Y');
 
-  bondData.forEach((d) => {
+  lifeExpectanciesData.forEach((d) => {
     d.date = parseDate(d.Date);
   });
 
-  const chartContainer = d3.select('#interest-rates-chart');
+  const chartContainer = d3.select('#life-expectancies-chart');
   chartContainer.html('');
 
   const graphWidth = chartContainer.node().offsetWidth;
@@ -21,7 +21,7 @@ function drawBondData(bondData, windowWidth) {
     .attr('height', graphHeight);
 
   const yScale = d3.scaleLinear()
-    .domain([-1, 16])
+    .domain([68, 80])
     .range([graphHeight - margins.top - margins.bottom, 0]);
 
   const yAxis = d3.axisRight()
@@ -46,12 +46,12 @@ function drawBondData(bondData, windowWidth) {
     .attr('y', -32);
 
   const xScale = d3.scaleTime()
-    .domain([parseDate('1/2/80'), parseDate('12/31/16')])
+    .domain([parseDate('1960'), parseDate('2013')])
     .range([0, graphWidth - margins.left - margins.right]);
 
   let numXTicks = 10;
   if (windowWidth < 400) {
-    numXTicks = 5;
+    numXTicks = 2;
   }
 
   const xAxis = d3.axisBottom()
@@ -71,41 +71,41 @@ function drawBondData(bondData, windowWidth) {
 
   const usLineData = d3.line()
     .x((d) => xScale(d.date))
-    .y((d) => yScale(+d['USGG10YR Index']))
-    .defined((d) => d['USGG10YR Index'] !== '');
+    .y((d) => yScale(+d['United States']))
+    .defined((d) => d['United States'] !== '');
 
   const ukLineData = d3.line()
     .x((d) => xScale(d.date))
-    .y((d) => yScale(+d['GUKG10 Index']))
-    .defined((d) => d['GUKG10 Index'] !== '');
+    .y((d) => yScale(+d['United Kingdom']))
+    .defined((d) => d['United Kingdom'] !== '');
 
   const germanLineData = d3.line()
     .x((d) => xScale(d.date))
-    .y((d) => yScale(+d['GDBR10 Index']))
-    .defined((d) => d['GDBR10 Index'] !== '');
+    .y((d) => yScale(+d['Germany']))
+    .defined((d) => d['Germany'] !== '');
 
-  const ukBonds = lineGroup
-    .datum(bondData)
+  const ukLifeExpect = lineGroup
+    .datum(lifeExpectanciesData)
     .append('path')
-    .attr('class', 'ukBonds')
+    .attr('class', 'ukLifeExpect')
     .attr('d', (d) => ukLineData(d))
     .style('stroke', '#cec6b9')
     .style('stroke-width', '1')
     .style('fill', 'none');
 
-  const germanBonds = lineGroup
-    .datum(bondData)
+  const germanLifeExpect = lineGroup
+    .datum(lifeExpectanciesData)
     .append('path')
-    .attr('class', 'germanBonds')
+    .attr('class', 'germanLifeExpect')
     .attr('d', (d) => germanLineData(d))
     .style('stroke', '#cec6b9')
     .style('stroke-width', '1')
     .style('fill', 'none');
 
-  const usBonds = lineGroup
-    .datum(bondData)
+  const usLifeExpect = lineGroup
+    .datum(lifeExpectanciesData)
     .append('path')
-    .attr('class', 'usBonds')
+    .attr('class', 'usLifeExpect')
     .attr('d', (d) => usLineData(d))
     .style('stroke', '#BB6D82')
     .style('stroke-width', '2')
@@ -115,26 +115,25 @@ function drawBondData(bondData, windowWidth) {
     .attr('class', 'annotationGroup')
     .attr('transform', `translate(0,${margins.top})`);
 
-  // label us treasury yield
+  // // label us
   annotationGroup.append('text')
     .attr('class', 'annotationLabel')
-    .attr('x', xScale(parseDate('1/1/80')))
-    .attr('y', yScale(16.7))
+    .attr('x', xScale(parseDate('2011')))
+    .attr('y', yScale(77.8))
     .style('fill', '#BB6D82')
-    .text('US 10-year Treasury yield');
+    .text('US');
 
   // label uk
   annotationGroup.append('text')
     .attr('class', 'annotationLabel')
-    .attr('x', xScale(parseDate('1/1/91')))
-    .attr('y', yScale(12.5))
-    .text('UK 10-year gilt yield');
+    .attr('x', xScale(parseDate('2009')))
+    .attr('y', yScale(81))
+    .text('UK');
 
   // label german
   annotationGroup.append('text')
     .attr('class', 'annotationLabel')
-    .attr('x', xScale(parseDate('1/1/90')))
-    .attr('y', yScale(5.1))
-    .style('text-anchor', 'end')
-    .text('German bund yield');
+    .attr('x', xScale(parseDate('2008')))
+    .attr('y', yScale(79.2))
+    .text('Germany');
 }

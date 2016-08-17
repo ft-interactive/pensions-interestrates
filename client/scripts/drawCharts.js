@@ -1,4 +1,4 @@
-/* global d3, queue, drawBondData, drawLifeExpectancies */
+/* global document, d3, queue, drawBondData, drawLifeExpectancies */
 
 let windowWidth = window.innerWidth;
 
@@ -20,3 +20,25 @@ queue()
   .defer(d3.tsv, 'data/bonddata.tsv')
   .defer(d3.tsv, 'data/lifeExpectancies.tsv')
   .await(drawCharts);
+
+function percentEncode(string) {
+  return string.replace(/#/g, '%23').replace(/,/g, '%2c').replace(/ /g, '%20');
+}
+
+document.getElementById('tweet').addEventListener('click', () => {
+  const baseURL = `https://twitter.com/intent/tweet?url=http://${window.location.hostname + window.location.pathname}`;
+  const text = document.getElementById('tweetable').innerText;
+  console.log(document.getElementById('tweetable').innerText);
+  console.log(text);
+
+  const tweetText = `&text=${text}`;
+  const related = '&related=ajam';
+  const counterURL = `&counturl=${window.location.hostname + window.location.pathname}`;
+
+  const twitterURL = percentEncode(baseURL + tweetText + related + counterURL);
+
+  const settings = 'width=500,height=300,scrollbars=no,location=0,statusbars=0,' +
+                    'menubars=0,toolbars=0,resizable=0';
+
+  window.open(twitterURL, 'Tweet', settings);
+});

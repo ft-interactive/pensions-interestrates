@@ -81,13 +81,108 @@ $share-button-size: 38px;
   .step {
     margin: 3em auto;
     width: 100%;
-    // height: 400px;
   }
 
-  #step1 {
+  #graphic1 {
     width: 100%;
-    height: 20px;
-    background: #A5526A;
+    margin: 3em auto 4em auto;
+
+    $barHeight: 50px;
+
+    .pf-liability {
+      width: 12%;
+      height: $barHeight;
+      border: 1px solid #BB6D82;
+      border: 1px solid #BB6D82;
+      margin-bottom: 1em;
+      margin-left: 76%;
+      position: relative;
+    }
+
+    .pf-liability:before {
+      content: "$16m";
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      line-height: $barHeight;
+      font-size: 1.5em;
+    }
+
+    .pf-liability:after {
+      content: "Needed to fund pensions";
+      position: absolute;
+      width: 200%;
+      top: -2.3em;
+      line-height: 1em;
+      font-size: 1em;
+    }
+
+    .pf-bar {
+      margin-bottom: 1em;
+      position: relative;
+    }
+
+    .pf-bar:last-of-type:after {
+      content: "Shortfall: $14.5m/year";
+      position: absolute;
+      width: 12%;
+      right: 12%;
+      bottom: -2.2em;
+      text-align: center;
+    }
+
+    .pf-principle {
+      width: 75%;
+      height: $barHeight;
+      background: #BB6D82;
+      border: 1px solid #BB6D82;
+      display: inline-block;
+    }
+
+    .pf-principle:before {
+      content: "$100m";
+      position: absolute;
+      width: 75%;
+      text-align: center;
+      line-height: $barHeight;
+      font-size: 1.5em;
+    }
+
+    .pf-interest {
+      height: $barHeight;
+      border: 1px solid #ECAFAF;
+      background: #ECAFAF;
+      display: inline-block;
+    }
+
+    .pf-interest-16 {
+      width: 12%;
+    }
+
+    .pf-interest-16:after {
+      content: "16% interest rate";
+      position: absolute;
+      left: 90%;
+      width: 10%;
+    }
+
+    .pf-interest-16-dotted {
+      width: 12%;
+      background: none;
+      border: 1px dotted #ECAFAF;
+    }
+
+    .pf-interest-1point5 {
+      width: 9.3%;
+      margin-left: -1px;
+    }
+
+    .pf-interest-1point5:after {
+      content: "1.5% interest rate";
+      position: absolute;
+      left: 90%;
+      width: 10%;
+    }
   }
 }
 

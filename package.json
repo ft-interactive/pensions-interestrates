@@ -43,15 +43,13 @@
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
   },
-  "optionalDependencies": {
-    "phantomjs-prebuilt": "^2.1.7",
-    "selenium-standalone": "^5.5.0",
-    "nightwatch": "^0.9.5"
-  },
   "engines": {
     "node": ">=6"
   },
   "optionalDependencies": {
+    "phantomjs-prebuilt": "^2.1.7",
+    "selenium-standalone": "^5.5.0",
+    "nightwatch": "^0.9.5",
     "babel-eslint": "^6.1.2",
     "eslint": "^3.1.1",
     "eslint-config-airbnb": "^9.0.1",

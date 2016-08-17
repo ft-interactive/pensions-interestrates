@@ -83,6 +83,50 @@ $share-button-size: 38px;
     width: 100%;
   }
 
+  svg {
+    overflow: visible;
+
+    .path {
+        stroke-width: 1px;
+        stroke: #c3bcb0;
+        fill: none;
+    }
+
+    .yAxis.yAxisCap text {
+        text-anchor: end !important;
+    }
+
+    .yAxis path.domain {
+        stroke: none;
+    }
+
+    .axisLabel {
+        font-size: 14px;
+    }
+
+    text {
+        fill: #6b6e68;
+        font-size: 14px;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .yAxis .tick line {
+        opacity: 1;
+        stroke: #C3BCB0;
+        stroke-dasharray: 1 2;
+    }
+
+    .xAxis .tick line {
+        opacity: 1;
+        stroke: #C3BCB0;
+    }
+  }
+
+  #interest-rates-chart {
+    margin-top: 3em;
+  }
+
   .bar-graphic {
     width: 100%;
     margin: 5em auto;

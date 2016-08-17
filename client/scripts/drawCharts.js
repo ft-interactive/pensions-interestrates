@@ -6,10 +6,8 @@ function drawBondData(bondData) {
   const parseDate = d3.timeParse('%-m/%-d/%y');
 
   bondData.forEach((d) => {
-    d.date = parseDate(d.date);
+    d.date = parseDate(d.Date);
   });
-
-  console.log(bondData);
 
   const chartContainer = d3.select('#interest-rates-chart');
   chartContainer.html('');
@@ -55,9 +53,15 @@ function drawBondData(bondData) {
     .domain([parseDate('1/2/80'), parseDate('12/31/16')])
     .range([0, graphWidth - margins.left - margins.right]);
 
+  let numXTicks = 10;
+  if (windowWidth < 400) {
+    numXTicks = 5;
+  }
+
   const xAxis = d3.axisBottom()
     .scale(xScale)
     .tickSizeOuter(5)
+    .ticks(numXTicks)
     .tickFormat(d => d3.timeFormat('%Y')(d));
 
   const xLabel = svg.append('g')

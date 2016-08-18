@@ -27,7 +27,7 @@
 
   <div class="step">
     {% markdown %}
-    This is particularly bad for pension funds, which rely on bonds to fund yearly payouts. To make up the difference for lower interest rates, pension funds have to spend more to get the same annual return. 
+    This is particularly bad for pension funds, which rely on bonds to fund yearly payouts. To make up the difference for lower interest rates, pension funds have to spend more to get the same annual return.
 
     To continue the example, you would need to invest as much as $1.1bn at 1.5 per cent interest rates to make the same amount you would have made with 16 per cent interest rates and $100m, all other things equal.
     {% endmarkdown %}
@@ -48,7 +48,7 @@
 
   <div class="step">
     {% markdown %}
-    Add to that the fact that people are living longer. 
+    Add to that the fact that people are living longer.
     {% endmarkdown %}
     <div id="life-expectancies-chart"></div>
   </div>
@@ -67,14 +67,15 @@
 
   <div class="step">
     {% markdown %}
-    That's the equivalent of @@, @@ and @@. Compare that pension deficit with things you are familiar with. [ Cute interactive thing that people can share on social or maybe a static graphic. ] 
+    That's the equivalent of @@, @@ and @@. Compare that pension deficit with things you are familiar with. [ Cute interactive thing that people can share on social or maybe a static graphic. ]
     {% endmarkdown %}
     <div id="compare-pds">
       <h2 class="o-typography-heading2">Interactive: How big is the pension deficit?</h2>
-      <p>The <span>US</span> pension deficit is <span>7</span> times bigger than <span>Apple</span>.</p>
+      <p class="interactive-sentence">The <span class="interactive-option" id="interactive-option--us" role="button" aria-pressed="true">US</span> <span class="interactive-option" id="interactive-option--uk" role="button" aria-pressed="false">UK</span> pension deficit is <br /><span id="interactive-result"></span><br /> than <input type="text" id="interactive-compare" placeholder="Company or country" />.</p>
       <p id="tweetable">The US pension deficit is 7 times bigger than Apple.%0D%0A&#9607;&#9607;&#9607;&#9607;&#9607;&#9607;&#9607;&nbsp;US deficit $3.4tn%0D%0A &#9607;&nbsp;Apple $0.5tn%0D%0A</p>
-      <button class="o-buttons o-buttons--standout">Generate random</button>
+      <button class="o-buttons o-buttons--standout" id="random">Generate random</button>
       <button class="o-buttons o-buttons--standout" id="tweet">Tweet</button>
+      <div class="sourceline">Sources: <a href="http://data.worldbank.org/indicator/NY.GDP.MKTP.CD" target="_blank">World Bank</a></div>
     </div>
   </div>
 

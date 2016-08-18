@@ -1,10 +1,11 @@
-/* global document, d3, queue, drawBondData, drawLifeExpectancies */
+/* global document, d3, queue, drawBondData, drawLifeExpectancies, loadComparisonInteractive */
 
 let windowWidth = window.innerWidth;
 
-function drawCharts(error, bondData, lifeExpectancyData) {
+function drawCharts(error, bondData, lifeExpectancyData, comparisonData) {
   drawBondData(bondData);
   drawLifeExpectancies(lifeExpectancyData);
+  loadComparisonInteractive(comparisonData);
 
   d3.select(window).on('resize', () => {
     if (Math.abs(window.innerWidth - windowWidth) > 10) {
@@ -19,6 +20,7 @@ function drawCharts(error, bondData, lifeExpectancyData) {
 queue()
   .defer(d3.tsv, 'data/bonddata.tsv')
   .defer(d3.tsv, 'data/lifeExpectancies.tsv')
+  .defer(d3.tsv, 'data/comparisonData.tsv')
   .await(drawCharts);
 
 function percentEncode(string) {

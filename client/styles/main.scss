@@ -270,16 +270,50 @@ $share-button-size: 38px;
     border-radius: 10px;
     box-shadow: 0 1px 1px 0 #cec6b9;
     padding: 1em 1em 2em 1em;
-    margin: 1em 0;  
+    margin: 1em 0;
+    text-align: center;
 
     h2 {
       margin-top: 0.5em;
-    } 
+    }
+
+    .interactive-sentence {
+      margin: 3em 0;
+      font-family: MetricWeb, sans-serif;
+      font-size: 1.2em;
+      line-height: 3em;
+    }
+
+    .interactive-option {
+      padding: 0.25em 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      color: #AAA;
+      cursor: pointer;
+
+      &[aria-pressed=true] {
+        background: #27757b;
+        border-color: #27757b;
+        color: white;
+      }
+    }
+
+    #interactive-result {
+      color: #27757b;
+      font-weight: 600;
+      font-size: 2em;
+    }
 
     #tweetable {
       display: none;
     }
   }
+}
+
+.sourceline {
+  color: #777;
+  font-size: 14px;
+  text-align: left;
 }
 
 

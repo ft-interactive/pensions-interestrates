@@ -19,6 +19,7 @@
 
 <link rel="stylesheet" href="https://origami-build.ft.com/v2/bundles/css?modules=n-normalize@^1,o-fonts@^2">
 <link rel="stylesheet" href="https://origami-build.ft.com/v2/bundles/css?modules=o-grid@^4,o-typography@^4.2,o-buttons@^4">
+<link rel="stylesheet" href="styles/jquery-ui.css">
 <link rel="stylesheet" href="styles/main.css">
 {% if stylesheets %}{% for stylesheet in stylesheets %}
 <link rel="stylesheet" href="{{ stylesheet }}">
@@ -42,6 +43,9 @@
 
 <script src="scripts/d3.v4.min.js"></script>
 <script src="scripts/queue.js"></script>
+<script src="scripts/underscore.min.js"></script>
+<script src="scripts/jquery-3.1.0.js"></script>
+<script src="scripts/jquery-ui.js"></script>
 
 <title>{{ title | default(headline, true) }} &mdash; FT.com</title>
 <meta name="twitter:title" content="{{ socialHeadline | default(headline, true) }}">

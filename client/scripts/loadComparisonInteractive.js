@@ -1,8 +1,10 @@
+import * as _ from 'underscore';
+
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-function loadComparisonInteractive(data) {
+export function loadComparisonInteractive(data) {
   // console.log(data)
 
   var list = _.pluck(data, 'name');

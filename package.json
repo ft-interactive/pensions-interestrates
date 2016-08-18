@@ -71,6 +71,8 @@
     "preflight": "gulp test:preflight"
   },
   "dependencies": {
-    "d3": "^4.2.2"
+    "d3": "^4.2.2",
+    "d3-queue": "^3.0.2",
+    "underscore": "^1.8.3"
   }
 }

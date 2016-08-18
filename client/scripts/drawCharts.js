@@ -1,9 +1,13 @@
+/* global document, drawBondData, drawLifeExpectancies, loadComparisonInteractive */
+
 import * as d3 from 'd3';
-/* global document, d3, queue, drawBondData, drawLifeExpectancies, loadComparisonInteractive */
+import { drawBondData } from './drawBondData';
+import { drawLifeExpectancies } from './drawLifeExpectancies';
+import { loadComparisonInteractive } from './loadComparisonInteractive';
 
 let windowWidth = window.innerWidth;
 
-function drawCharts(error, bondData, lifeExpectancyData, comparisonData) {
+export function drawCharts(error, bondData, lifeExpectancyData, comparisonData) {
   drawBondData(bondData);
   drawLifeExpectancies(lifeExpectancyData);
   loadComparisonInteractive(comparisonData);
@@ -17,12 +21,6 @@ function drawCharts(error, bondData, lifeExpectancyData, comparisonData) {
     }
   });
 }
-
-queue()
-  .defer(d3.tsv, 'data/bonddata.tsv')
-  .defer(d3.tsv, 'data/lifeExpectancies.tsv')
-  .defer(d3.tsv, 'data/comparisonData.tsv')
-  .await(drawCharts);
 
 function percentEncode(string) {
   return string.replace(/#/g, '%23').replace(/,/g, '%2c').replace(/ /g, '%20');

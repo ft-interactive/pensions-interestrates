@@ -1,4 +1,6 @@
-function drawLifeExpectancies(lifeExpectanciesData, windowWidth) {
+import * as d3 from 'd3';
+
+export function drawLifeExpectancies(lifeExpectanciesData, windowWidth) {
   const parseDate = d3.timeParse('%Y');
 
   lifeExpectanciesData.forEach((d) => {

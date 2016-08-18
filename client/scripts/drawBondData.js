@@ -1,4 +1,6 @@
-function drawBondData(bondData, windowWidth) {
+import * as d3 from 'd3';
+
+export function drawBondData(bondData, windowWidth) {
   const parseDate = d3.timeParse('%-m/%-d/%y');
 
   bondData.forEach((d) => {

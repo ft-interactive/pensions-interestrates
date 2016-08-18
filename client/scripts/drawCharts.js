@@ -65,11 +65,35 @@ const config = {
       },
     ],
   },
+  assetsLiabilities: {
+    dateFormat: '%d-%b-%Y',
+    selectorId: 'assets-liabilities-chart',
+    yAxisLabel: '%',
+    yScale: [0, 450],
+    xDomain: ['01-Dec-1999', '01-Jul-2016'],
+    columns: [
+      {
+        columnName: 'Liabilities',
+        color: '#af516c',
+        label: 'Liabilities',
+        labelPlacement: { x: '01-Jan-2001', y: 170 },
+        strokeWeight: 2,
+      },
+      {
+        columnName: 'Assets',
+        color: '#ecafaf',
+        label: 'Assets',
+        labelPlacement: { x: '01-Jan-2004', y: 70 },
+        strokeWeight: 2,
+      },
+    ],
+  },
 };
 
-export function drawCharts(error, bondData, lifeExpectancyData, comparisonData) {
+export function drawCharts(error, bondData, lifeExpectancyData, assetsLiabilitiesData, comparisonData) {
   drawLineChart(bondData, config.bondYields, windowWidth);
   drawLineChart(lifeExpectancyData, config.lifeExpectancy, windowWidth);
+  drawLineChart(assetsLiabilitiesData, config.assetsLiabilities, windowWidth);
   loadComparisonInteractive(comparisonData);
 
   d3.select(window).on('resize', () => {
@@ -78,6 +102,7 @@ export function drawCharts(error, bondData, lifeExpectancyData, comparisonData) 
 
       drawLineChart(bondData, config.bondYields, windowWidth);
       drawLineChart(lifeExpectancyData, config.lifeExpectancy, windowWidth);
+      drawLineChart(assetsLiabilitiesData, config.assetsLiabilities, windowWidth);
     }
   });
 }

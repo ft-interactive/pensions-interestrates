@@ -1,4 +1,4 @@
-&	Assets	Liabilities
+Date	Assets	Liabilities
 01-Dec-1999	100.0000	100.0000
 01-Jan-2000	96.6051	102.5265
 01-Feb-2000	96.0010	107.4364
@@ -199,10 +199,3 @@
 01-May-2016	211.8844	410.6958
 01-Jun-2016	213.0136	433.2072
 01-Jul-2016	218.6629	440.8138
-&title=Pension assets v liabilities		
-&subtitle=Returns (rebased)		
-"&source=Ryan ALM, Inc"		
-&footnote=delete if not required		
-&comment=Line chart		
-&doublescale=0		
-&accumulate=false

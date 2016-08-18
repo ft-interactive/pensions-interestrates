@@ -38,7 +38,7 @@ const config = {
   lifeExpectancy: {
     dateFormat: '%Y',
     selectorId: 'life-expectancies-chart',
-    yAxisLabel: '%',
+    yAxisLabel: 'years',
     yScale: [68, 80],
     xDomain: [1960, 2013],
     columns: [

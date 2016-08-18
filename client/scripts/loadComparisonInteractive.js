@@ -15,7 +15,7 @@ function loadComparisonInteractive(data) {
     }
   });
 
-  document.getElementById('interactive-compare').value = 'Belgium';
+  document.getElementById('interactive-compare').value = 'Apple Inc.';
   getResult(); // start page with this
 
   function getResult() {
@@ -25,13 +25,23 @@ function loadComparisonInteractive(data) {
     }
 
     const name = document.getElementById('interactive-compare').value;
+    const category = document.getElementById('interactive-compare').category;
 
-    const value = _.findWhere(data, {name}).value / 1000000; // original data in millions
+    let value;
+    if (category === 'country') {
+      value = _.findWhere(data, {name}).value / 1000000; // original country data in millions
+    } else {
+      value = _.findWhere(data, {name}).value / 1000; // original company data in billions
+    }
 
     let multiplyFactor = pensionDeficit / value;
     let interactiveText;
     if (multiplyFactor < 1) {
-      multiplyFactor = Math.round(1 / multiplyFactor);
+      if (Math.round(1 / multiplyFactor) != 1) {
+        multiplyFactor = Math.round(1 / multiplyFactor);
+      } else {
+        multiplyFactor = Math.round(100 / multiplyFactor) / 100;
+      }
       interactiveText = `${multiplyFactor} times smaller`;
     } else {
       multiplyFactor = Math.round(multiplyFactor);

@@ -269,7 +269,7 @@ $share-button-size: 38px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 1px 1px 0 #cec6b9;
-    padding: 1em 1em 2em 1em;
+    padding-top: 1em;
     margin: 2em 0 1em 0;
     text-align: center;
 
@@ -306,6 +306,12 @@ $share-button-size: 38px;
 
     #tweetable {
       display: none;
+    }
+
+    .sourceline {
+      margin-top: 2em;
+      padding-bottom: 1em;
+      margin-left: 1em;
     }
   }
 }

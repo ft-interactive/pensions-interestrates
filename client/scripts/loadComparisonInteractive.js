@@ -28,7 +28,7 @@ export function loadComparisonInteractive(data) {
 
   // Pension deficit notes:
   // US public pension deficit: 3.4 trillion USD (http://www.ft.com/cms/s/0/c9966bea-fcd8-11e5-b5f5-070dca6d0a0d.html)
-  // US corporate pension deficits: 
+  // US corporate pension deficits: 0.638 trillion USD (http://www.mercer.com/newsroom/june-2016-pension-funding.html)
   // UK public pension deficit: 1.18 trillion USD (http://www.ft.com/cms/s/0/bb94f4b8-3a1c-11e6-a780-b48ed7b6126f.html#axzz4HilVkHt9, 900bn pounds)
   // UK corporate pension deficit: 0.196 trillion USD (Mercer report, 149bn pounds on 8/4/2016)
 
@@ -44,7 +44,7 @@ export function loadComparisonInteractive(data) {
       if (document.getElementById('interactive-option--public').getAttribute('aria-pressed') === 'true') {
         pensionDeficit = 3.4; // US public
       } else {
-        pensionDeficit = 0; // US private TKTK
+        pensionDeficit = 0.638; // US private
       }
     }
 

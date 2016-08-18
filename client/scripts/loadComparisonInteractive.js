@@ -1,4 +1,5 @@
 import * as _ from 'underscore';
+import { getTweetText } from './drawCharts';
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -61,6 +62,8 @@ export function loadComparisonInteractive(data) {
 
     document.getElementById('interactive-compare').value = name;
     document.getElementById('interactive-result').innerHTML = interactiveText;
+
+    getTweetText();
   }
 
   document.getElementById('random').addEventListener('click', () => {

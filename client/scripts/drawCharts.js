@@ -116,6 +116,17 @@ function percentEncode(string) {
   return string.replace(/#/g, '%23').replace(/,/g, '%2c').replace(/ /g, '%20');
 }
 
+export function getTweetText() {
+  const maxCharts = 140;
+
+  const type = $('.interactive-option[aria-pressed=true]').text();
+  const companyCountry = $('#interactive-compare').val();
+  const result = $('#interactive-result').text();
+  const multiplier = result.match(/\d+/)[0];
+
+  console.log(type, companyCountry, result, multiplier);
+}
+
 document.getElementById('tweet').addEventListener('click', () => {
   const baseURL = `https://twitter.com/intent/tweet?url=http://${window.location.hostname + window.location.pathname}`;
   const text = document.getElementById('tweetable').innerText;

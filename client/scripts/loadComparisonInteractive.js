@@ -1,3 +1,7 @@
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 function loadComparisonInteractive(data) {
   // console.log(data)
 
@@ -42,9 +46,10 @@ function loadComparisonInteractive(data) {
       } else {
         multiplyFactor = Math.round(100 / multiplyFactor) / 100;
       }
+      multiplyFactor = numberWithCommas(multiplyFactor);
       interactiveText = `${multiplyFactor} times smaller`;
     } else {
-      multiplyFactor = Math.round(multiplyFactor);
+      multiplyFactor = numberWithCommas(Math.round(multiplyFactor));
       interactiveText = `${multiplyFactor} times bigger`;
     }
 

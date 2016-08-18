@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 
 export function drawBondData(bondData, windowWidth) {
-  const parseDate = d3.timeParse('%-m/%-d/%y');
+  const parseDate = d3.timeParse('%d-%b-%Y');
 
   bondData.forEach((d) => {
     d.date = parseDate(d.Date);
@@ -48,7 +48,7 @@ export function drawBondData(bondData, windowWidth) {
     .attr('y', -32);
 
   const xScale = d3.scaleTime()
-    .domain([parseDate('1/2/80'), parseDate('12/31/16')])
+    .domain([parseDate('01-Jan-1980'), parseDate('31-Dec-2016')])
     .range([0, graphWidth - margins.left - margins.right]);
 
   let numXTicks = 10;
@@ -91,7 +91,7 @@ export function drawBondData(bondData, windowWidth) {
     .append('path')
     .attr('class', 'ukBonds')
     .attr('d', (d) => ukLineData(d))
-    .style('stroke', '#cec6b9')
+    .style('stroke', '#76acb8')
     .style('stroke-width', '1')
     .style('fill', 'none');
 
@@ -100,7 +100,7 @@ export function drawBondData(bondData, windowWidth) {
     .append('path')
     .attr('class', 'germanBonds')
     .attr('d', (d) => germanLineData(d))
-    .style('stroke', '#cec6b9')
+    .style('stroke', '#3d7ab3')
     .style('stroke-width', '1')
     .style('fill', 'none');
 
@@ -120,7 +120,7 @@ export function drawBondData(bondData, windowWidth) {
   // label us treasury yield
   annotationGroup.append('text')
     .attr('class', 'annotationLabel')
-    .attr('x', xScale(parseDate('1/1/80')))
+    .attr('x', xScale(parseDate('01-Jan-1980')))
     .attr('y', yScale(16.7))
     .style('fill', '#BB6D82')
     .text('US 10-year Treasury yield');
@@ -128,15 +128,17 @@ export function drawBondData(bondData, windowWidth) {
   // label uk
   annotationGroup.append('text')
     .attr('class', 'annotationLabel')
-    .attr('x', xScale(parseDate('1/1/91')))
+    .attr('x', xScale(parseDate('01-Jan-1991')))
     .attr('y', yScale(12.5))
+    .style('fill', '#76acb8')
     .text('UK 10-year gilt yield');
 
   // label german
   annotationGroup.append('text')
     .attr('class', 'annotationLabel')
-    .attr('x', xScale(parseDate('1/1/90')))
-    .attr('y', yScale(5.1))
+    .attr('x', xScale(parseDate('01-Jan-1990')))
+    .attr('y', yScale(4.2))
+    .style('fill', '#3d7ab3')
     .style('text-anchor', 'end')
     .text('German bund yield');
 }

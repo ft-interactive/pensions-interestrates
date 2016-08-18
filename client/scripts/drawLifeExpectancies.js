@@ -91,7 +91,7 @@ export function drawLifeExpectancies(lifeExpectanciesData, windowWidth) {
     .append('path')
     .attr('class', 'ukLifeExpect')
     .attr('d', (d) => ukLineData(d))
-    .style('stroke', '#cec6b9')
+    .style('stroke', '#76acb8')
     .style('stroke-width', '1')
     .style('fill', 'none');
 
@@ -100,7 +100,7 @@ export function drawLifeExpectancies(lifeExpectanciesData, windowWidth) {
     .append('path')
     .attr('class', 'germanLifeExpect')
     .attr('d', (d) => germanLineData(d))
-    .style('stroke', '#cec6b9')
+    .style('stroke', '#3d7ab3')
     .style('stroke-width', '1')
     .style('fill', 'none');
 
@@ -130,6 +130,7 @@ export function drawLifeExpectancies(lifeExpectanciesData, windowWidth) {
     .attr('class', 'annotationLabel')
     .attr('x', xScale(parseDate('2009')))
     .attr('y', yScale(81))
+    .style('fill', '#76acb8')
     .text('UK');
 
   // label german
@@ -137,5 +138,6 @@ export function drawLifeExpectancies(lifeExpectanciesData, windowWidth) {
     .attr('class', 'annotationLabel')
     .attr('x', xScale(parseDate('2008')))
     .attr('y', yScale(79.2))
+    .style('fill', '#3d7ab3')
     .text('Germany');
 }

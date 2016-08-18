@@ -1,5 +1,3 @@
-/* global document */
-
 import * as d3 from 'd3';
 import { drawLineChart } from './drawLineChart';
 import { loadComparisonInteractive } from './loadComparisonInteractive';
@@ -42,7 +40,7 @@ const config = {
     selectorId: 'life-expectancies-chart',
     yAxisLabel: '%',
     yScale: [68, 80],
-    xDomain: [1960, 2013],    
+    xDomain: [1960, 2013],
     columns: [
       {
         columnName: 'United Kingdom',

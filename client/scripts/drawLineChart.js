@@ -40,7 +40,8 @@ export function drawLineChart(data, config, windowWidth) {
     .attr('x', graphWidth - margins.right - 12)
     .attr('y', -10);
 
-  const yAxisLabel = yLabel.append('text')
+  // append y axis label (units)
+  yLabel.append('text')
     .text(config.yAxisLabel)
     .style('text-anchor', 'right')
     .attr('class', 'axisLabel')
@@ -62,7 +63,8 @@ export function drawLineChart(data, config, windowWidth) {
     .ticks(numXTicks)
     .tickFormat(d => d3.timeFormat('%Y')(d));
 
-  const xLabel = svg.append('g')
+  // append x axis
+  svg.append('g')
     .attr('class', 'xAxis')
     .attr('transform', `translate(0,${graphHeight - margins.bottom})`)
     .call(xAxis);
@@ -83,7 +85,8 @@ export function drawLineChart(data, config, windowWidth) {
       .y((d) => yScale(+d[columnConfig.columnName]))
       .defined((d) => d[columnConfig.columnName] !== '');
 
-    const line = lineGroup
+    // append the actual line
+    lineGroup
       .datum(data)
       .append('path')
       .attr('class', `${columnConfig.columnName}-line`)

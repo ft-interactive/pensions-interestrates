@@ -77,6 +77,28 @@ export function drawLineChart(data, config, windowWidth) {
     .attr('class', 'annotationGroup')
     .attr('transform', `translate(0,${margins.top})`);
 
+  if (config.type === 'area') {
+    const area = d3.area()
+      .x((d) => xScale(d.date))
+      .y0((d) => yScale(d[config.columns[0].columnName]))
+      .y1((d) => yScale(d[config.columns[1].columnName]));
+
+    // append the area
+    lineGroup
+      .datum(data)
+      .append('path')
+      .attr('d', (d) => area(d))
+      .style('stroke', 'none')
+      .style('fill', '#EFD9BC');
+
+    annotationGroup.append('text')
+      .attr('class', 'annotationLabel')
+      .attr('x', xScale(parseDate(config.areaLabelPlacement.x)))
+      .attr('y', yScale(config.areaLabelPlacement.y))
+      .style('fill', '#666')
+      .text(config.areaLabel);
+  }
+
   for (let i = 0; i < config.columns.length; i++) {
     const columnConfig = config.columns[i];
 

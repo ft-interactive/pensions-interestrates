@@ -8,6 +8,7 @@ const config = {
   bondYields: {
     dateFormat: '%d-%b-%Y',
     selectorId: 'interest-rates-chart',
+    type: 'line',
     yAxisLabel: '%',
     yScale: [-1, 16],
     xDomain: ['01-Jan-1980', '31-Dec-2016'],
@@ -38,6 +39,7 @@ const config = {
   lifeExpectancy: {
     dateFormat: '%Y',
     selectorId: 'life-expectancies-chart',
+    type: 'line',
     yAxisLabel: 'years',
     yScale: [68, 80],
     xDomain: [1960, 2013],
@@ -68,6 +70,9 @@ const config = {
   assetsLiabilities: {
     dateFormat: '%d-%b-%Y',
     selectorId: 'assets-liabilities-chart',
+    type: 'area',
+    areaLabel: 'Liability gap',
+    areaLabelPlacement: { x: '01-Jan-2014', y: 250 },
     yAxisLabel: '%',
     yScale: [0, 450],
     xDomain: ['01-Dec-1999', '01-Jul-2016'],

@@ -1,31 +1,13 @@
+/* global $ */
+
 import * as _ from 'underscore';
 import { getTweetText } from './drawCharts';
 
 function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
 export function loadComparisonInteractive(data) {
-  // console.log(data)
-
-  var list = _.pluck(data, 'name');
-  $('#interactive-compare').autocomplete({
-    source: list,
-    minLength: 2,
-    delay: 500,
-    select: function select(e, ui) {
-      if (ui.item) {
-        $(e.target).val(ui.item.value);
-      }
-      var name = $(this).val();
-      getResult(name);
-    },
-  });
-
-  document.getElementById('interactive-compare').value = 'Apple Inc';
-  getResult(); // start page with this
-
-
   // Pension deficit notes:
   // US public pension deficit: 3.4 trillion USD (http://www.ft.com/cms/s/0/c9966bea-fcd8-11e5-b5f5-070dca6d0a0d.html)
   // US corporate pension deficits: 0.638 trillion USD (http://www.mercer.com/newsroom/june-2016-pension-funding.html)
@@ -72,7 +54,7 @@ export function loadComparisonInteractive(data) {
       if (Math.round(1 / multiplyFactor) !== 1) {
         multiplyFactor = numberWithCommas(Math.round(multiplyFactor));
       } else {
-        multiplyFactor = Math.round(multiplyFactor*100) / 100;
+        multiplyFactor = Math.round(multiplyFactor * 100) / 100;
       }
       interactiveText = `${multiplyFactor} times bigger`;
     }
@@ -84,7 +66,7 @@ export function loadComparisonInteractive(data) {
   }
 
   document.getElementById('random').addEventListener('click', () => {
-    const randomId = Math.floor(Math.random()*data.length);
+    const randomId = Math.floor(Math.random() * data.length);
     const name = data[randomId].name;
 
     document.getElementById('interactive-compare').value = name;
@@ -92,10 +74,29 @@ export function loadComparisonInteractive(data) {
   });
 
 
-  $('.interactive-option').on('click', function() {
-    $(this).parent().find('.interactive-option').attr('aria-pressed', false);
+  $('.interactive-option').on('click', function toggleButtons() {
+    $(this).parent().find('.interactive-option')
+      .attr('aria-pressed', false);
     $(this).attr('aria-pressed', true);
 
     getResult();
   });
+
+
+  const list = _.pluck(data, 'name');
+  $('#interactive-compare').autocomplete({
+    source: list,
+    minLength: 2,
+    delay: 500,
+    select: function select(e, ui) {
+      if (ui.item) {
+        $(e.target).val(ui.item.value);
+      }
+      const name = $(this).val();
+      getResult(name);
+    },
+  });
+
+  document.getElementById('interactive-compare').value = 'Apple Inc';
+  getResult(); // start page with this
 }

@@ -69,14 +69,14 @@ $share-button-size: 38px;
 
 #bond-interactive {
 
-  // img {
-  //   width: 100%;
+  img {
+    width: 100%;
   //   background: white;
   //   border-radius: 10px;
   //   box-shadow: 0 1px 1px 0 #cec6b9;
   //   padding: 1em;
-  //   margin: 1em 0;
-  // }
+    margin: 1em 0;
+  }
 
   .step {
     margin: 3em auto;
@@ -270,7 +270,7 @@ $share-button-size: 38px;
     border-radius: 10px;
     box-shadow: 0 1px 1px 0 #cec6b9;
     padding: 1em 1em 2em 1em;
-    margin: 1em 0;
+    margin: 2em 0 1em 0;
     text-align: center;
 
     h2 {

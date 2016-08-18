@@ -21,13 +21,13 @@ export function loadComparisonInteractive(data) {
     }
   });
 
-  document.getElementById('interactive-compare').value = 'Apple Inc.';
+  document.getElementById('interactive-compare').value = 'Apple Inc';
   getResult(); // start page with this
 
   function getResult() {
     let pensionDeficit = 3.4; // in US trillions
-    if ( document.getElementById("interactive-option--uk").getAttribute('aria-pressed') === "true" ) {
-      pensionDeficit = 0.5 // in US trillions
+    if (document.getElementById('interactive-option--uk').getAttribute('aria-pressed') === "true" ) {
+      pensionDeficit = 0.5; // in US trillions
     }
 
     const name = document.getElementById('interactive-compare').value;
@@ -35,15 +35,15 @@ export function loadComparisonInteractive(data) {
 
     let value;
     if (category === 'country') {
-      value = _.findWhere(data, {name}).value / 1000000; // original country data in millions
+      value = _.findWhere(data, { name }).value; // original country data in trillions
     } else {
-      value = _.findWhere(data, {name}).value / 1000; // original company data in billions
+      value = _.findWhere(data, { name }).value; // original company data in trillions
     }
 
     let multiplyFactor = pensionDeficit / value;
     let interactiveText;
     if (multiplyFactor < 1) {
-      if (Math.round(1 / multiplyFactor) != 1) {
+      if (Math.round(1 / multiplyFactor) !== 1) {
         multiplyFactor = Math.round(1 / multiplyFactor);
       } else {
         multiplyFactor = Math.round(100 / multiplyFactor) / 100;
@@ -51,7 +51,11 @@ export function loadComparisonInteractive(data) {
       multiplyFactor = numberWithCommas(multiplyFactor);
       interactiveText = `${multiplyFactor} times smaller`;
     } else {
-      multiplyFactor = numberWithCommas(Math.round(multiplyFactor));
+      if (Math.round(1 / multiplyFactor) !== 1) {
+        multiplyFactor = numberWithCommas(Math.round(multiplyFactor));
+      } else {
+        multiplyFactor = Math.round(multiplyFactor*100) / 100;
+      }
       interactiveText = `${multiplyFactor} times bigger`;
     }
 

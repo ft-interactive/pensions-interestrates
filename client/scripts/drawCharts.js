@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 /* global document, d3, queue, drawBondData, drawLifeExpectancies, loadComparisonInteractive */
 
 let windowWidth = window.innerWidth;

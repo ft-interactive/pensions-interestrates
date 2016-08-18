@@ -69,5 +69,8 @@
     "start": "nodemon --watch gulpfile.babel.js --exec 'gulp watch'",
     "test": "npm run build",
     "preflight": "gulp test:preflight"
+  },
+  "dependencies": {
+    "d3": "^4.2.2"
   }
 }

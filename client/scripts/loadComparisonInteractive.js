@@ -19,16 +19,33 @@ export function loadComparisonInteractive(data) {
       }
       var name = $(this).val();
       getResult(name);
-    }
+    },
   });
 
   document.getElementById('interactive-compare').value = 'Apple Inc';
   getResult(); // start page with this
 
+
+  // Pension deficit notes:
+  // US public pension deficit: 3.4 trillion USD (http://www.ft.com/cms/s/0/c9966bea-fcd8-11e5-b5f5-070dca6d0a0d.html)
+  // US corporate pension deficits: 
+  // UK public pension deficit: 1.18 trillion USD (http://www.ft.com/cms/s/0/bb94f4b8-3a1c-11e6-a780-b48ed7b6126f.html#axzz4HilVkHt9, 900bn pounds)
+  // UK corporate pension deficit: 0.196 trillion USD (Mercer report, 149bn pounds on 8/4/2016)
+
   function getResult() {
-    let pensionDeficit = 3.4; // in US trillions
-    if (document.getElementById('interactive-option--uk').getAttribute('aria-pressed') === "true" ) {
-      pensionDeficit = 0.5; // in US trillions
+    let pensionDeficit; // in US trillions
+    if (document.getElementById('interactive-option--uk').getAttribute('aria-pressed') === 'true') {
+      if (document.getElementById('interactive-option--public').getAttribute('aria-pressed') === 'true') {
+        pensionDeficit = 1.18; // UK public
+      } else {
+        pensionDeficit = 0.196; // UK private
+      }
+    } else {
+      if (document.getElementById('interactive-option--public').getAttribute('aria-pressed') === 'true') {
+        pensionDeficit = 3.4; // US public
+      } else {
+        pensionDeficit = 0; // US private TKTK
+      }
     }
 
     const name = document.getElementById('interactive-compare').value;
@@ -76,7 +93,7 @@ export function loadComparisonInteractive(data) {
 
 
   $('.interactive-option').on('click', function() {
-    $('.interactive-option').attr('aria-pressed', false);
+    $(this).parent().find('.interactive-option').attr('aria-pressed', false);
     $(this).attr('aria-pressed', true);
 
     getResult();

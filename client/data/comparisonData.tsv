@@ -47,7 +47,6 @@ country	Denmark	0.2951643133
 country	Dominican Republic	0.06710326386
 country	Algeria	0.1668386178
 country	East Asia & Pacific (excluding high income)	13.06736584
-country	Early-demographic dividend	9.844617142
 country	East Asia & Pacific	21.28119021
 country	Europe & Central Asia (excluding high income)	2.887774281
 country	Europe & Central Asia	19.98555726
@@ -73,17 +72,11 @@ country	Greece	0.1952120064
 country	Grenada	0.0009781481481
 country	Guatemala	0.06379434877
 country	Guyana	0.003166029056
-country	High income	46.98524688
 country	Hong Kong SAR, China	0.3099287907
 country	Honduras	0.020152043
-country	Heavily indebted poor countries (HIPC)	0.6175840971
 country	Croatia	0.04873200367
 country	Haiti	0.008877465911
 country	Hungary	0.1206871381
-country	IBRD only	24.99111912
-country	IDA & IBRD total	27.21228721
-country	IDA total	2.220988811
-country	IDA blend	1.219731224
 country	Indonesia	0.8619339687
 country	IDA only	0.9915558214
 country	India	2.073542978
@@ -111,12 +104,7 @@ country	Liberia	0.002053
 country	Libya	0.02915270734
 country	St. Lucia	0.001436390326
 country	Latin America & Caribbean	5.148021741
-country	Least developed countries: UN classification	0.9112037571
-country	Low income	0.3929040881
 country	Sri Lanka	0.08231617238
-country	Lower middle income	5.820362719
-country	Low & middle income	25.96068024
-country	Late-demographic dividend	18.13982104
 country	Lithuania	0.04124398359
 country	Luxembourg	0.05779361207
 country	Latvia	0.02703526672
@@ -127,7 +115,6 @@ country	Madagascar	0.009980522718
 country	Maldives	0.003142812004
 country	Middle East & North Africa	3.113597975
 country	Mexico	1.144331343
-country	Middle income	25.56768637
 country	Macedonia, FYR	0.01008602126
 country	Mali	0.0131002637
 country	Myanmar	0.06486551516
@@ -155,11 +142,9 @@ country	Peru	0.1920837214
 country	Philippines	0.2919653364
 country	Palau	0.0002874
 country	Poland	0.474783393
-country	Pre-demographic dividend	1.266921274
 country	Portugal	0.198931394
 country	Paraguay	0.02762277872
 country	Pacific island small states	0.008625970093
-country	Post-demographic dividend	43.63841276
 country	Qatar	0.1669076923
 country	Romania	0.1779544899
 country	Russian Federation	1.326015097
@@ -201,7 +186,6 @@ country	Turkey	0.7182210783
 country	Tanzania	0.04489539208
 country	Uganda	0.02636924228
 country	Ukraine	0.09061502332
-country	Upper middle income	19.73288363
 country	Uruguay	0.05344269757
 country	United States	17.946996
 country	Uzbekistan	0.06673280139

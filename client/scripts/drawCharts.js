@@ -39,7 +39,7 @@ document.getElementById('tweet').addEventListener('click', () => {
 
   const twitterURL = percentEncode(baseURL + tweetText + related + counterURL);
 
-  const settings = 'width=500,height=300,scrollbars=no,location=0,statusbars=0,' +
+  const settings = 'width=500,height=400,scrollbars=no,location=0,statusbars=0,' +
                     'menubars=0,toolbars=0,resizable=0';
 
   window.open(twitterURL, 'Tweet', settings);

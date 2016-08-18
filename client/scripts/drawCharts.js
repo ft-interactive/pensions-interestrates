@@ -25,7 +25,7 @@ const config = {
         columnName: 'GDBR10 Index',
         color: '#3d7ab3',
         label: 'German bund yield',
-        labelPlacement: { x: '01-Jan-1990', y: 4.2 },
+        labelPlacement: { x: '01-Jan-1986', y: 4.2 },
         strokeWeight: 1,
       },
       {

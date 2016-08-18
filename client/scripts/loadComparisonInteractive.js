@@ -1,15 +1,60 @@
 /* global $ */
 
 import * as _ from 'underscore';
-import { getTweetText } from './drawCharts';
 
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
+function htmlEncode(s) {
+  const el = document.createElement('div');
+  el.innerText = el.textContent = s;
+  s = el.innerHTML;
+  return s;
+}
+
+function changeTweetText() {
+  const maxChars = 140;
+
+  const usUk = $('#usuk .interactive-option[aria-pressed=true]').text();
+  const publicPrivate = $('#publicprivate .interactive-option[aria-pressed=true]').text();
+  const companyCountry = $('#interactive-compare').val();
+  const result = $('#interactive-result').text();
+  const multiplier = result.replace(/,/, '').match(/\d+/)[0];
+
+  let sentence = `The ${usUk} ${publicPrivate} pension deficit is ${result} than ${companyCountry}`;
+
+  let barChart = '%0D%0A';
+  for (let i = 0; i < multiplier; i++) {
+    barChart += '▇';
+  }
+  if (result.indexOf('bigger') > 0) {
+    barChart += ` ${usUk}`;
+  } else {
+    barChart += ` ${companyCountry}`;
+  }
+  barChart += '%0D%0A▇';
+  if (result.indexOf('bigger') > 0) {
+    barChart += ` ${companyCountry}`;
+  } else {
+    barChart += ` ${usUk}`;
+  }
+  barChart += '%0D%0A';
+  const barChartLength = barChart.length;
+
+  const availableSpace = maxChars - sentence.length - barChartLength;
+  if (availableSpace >= 0) {
+    sentence += barChart;
+  }
+
+  document.getElementById('tweetable').innerText = sentence;
+
+  console.log(sentence, availableSpace, multiplier);
+}
+
 export function loadComparisonInteractive(data) {
   // Pension deficit notes:
-  // US public pension deficit: 3.4 trillion USD (http://www.ft.com/cms/s/0/c9966bea-fcd8-11e5-b5f5-070dca6d0a0d.html)
+  // US public pension deficit: 3.41 trillion USD (http://www.ft.com/cms/s/0/c9966bea-fcd8-11e5-b5f5-070dca6d0a0d.html)
   // US corporate pension deficits: 0.638 trillion USD (http://www.mercer.com/newsroom/june-2016-pension-funding.html)
   // UK public pension deficit: 1.18 trillion USD (http://www.ft.com/cms/s/0/bb94f4b8-3a1c-11e6-a780-b48ed7b6126f.html#axzz4HilVkHt9, 900bn pounds)
   // UK corporate pension deficit: 0.196 trillion USD (Mercer report, 149bn pounds on 8/4/2016)
@@ -18,13 +63,13 @@ export function loadComparisonInteractive(data) {
     let pensionDeficit; // in US trillions
     if (document.getElementById('interactive-option--uk').getAttribute('aria-pressed') === 'true') {
       if (document.getElementById('interactive-option--public').getAttribute('aria-pressed') === 'true') {
-        pensionDeficit = 1.18; // UK public
+        pensionDeficit = 0.984; // UK public
       } else {
         pensionDeficit = 0.196; // UK private
       }
     } else {
       if (document.getElementById('interactive-option--public').getAttribute('aria-pressed') === 'true') {
-        pensionDeficit = 3.4; // US public
+        pensionDeficit = 3.41; // US public
       } else {
         pensionDeficit = 0.638; // US private
       }
@@ -62,7 +107,7 @@ export function loadComparisonInteractive(data) {
     document.getElementById('interactive-compare').value = name;
     document.getElementById('interactive-result').innerHTML = interactiveText;
 
-    getTweetText();
+    changeTweetText();
   }
 
   document.getElementById('random').addEventListener('click', () => {

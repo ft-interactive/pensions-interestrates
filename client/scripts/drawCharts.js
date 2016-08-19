@@ -75,7 +75,7 @@ const config = {
     type: 'area',
     areaLabel: 'Liability gap',
     areaLabelPlacement: { x: '01-Jan-2014', y: 250 },
-    yAxisLabel: '%',
+    yAxisLabel: 'Rebased',
     yScale: [0, 450],
     xDomain: ['01-Dec-1999', '01-Jul-2016'],
     columns: [

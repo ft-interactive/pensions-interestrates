@@ -29,7 +29,7 @@ function changeTweetText() {
     barChart += '▇';
   }
   if (result.indexOf('bigger') > 0) {
-    barChart += ` ${usUk}`;
+    barChart += ` ${usUk} deficit`;
   } else {
     barChart += ` ${companyCountry}`;
   }
@@ -37,12 +37,12 @@ function changeTweetText() {
   if (result.indexOf('bigger') > 0) {
     barChart += ` ${companyCountry}`;
   } else {
-    barChart += ` ${usUk}`;
+    barChart += ` ${usUk} deficit`;
   }
   barChart += '%0D%0A';
   const barChartLength = barChart.length;
 
-  const availableSpace = maxChars - sentence.length - barChartLength;
+  const availableSpace = maxChars - sentence.length - barChartLength - 16; // minus 16 for link
   if (availableSpace >= 0) {
     sentence += barChart;
   }

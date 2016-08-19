@@ -1,7 +1,9 @@
 <div id="bond-interactive">
   <div class="step">
     {% markdown %}
-    Over the last two decades, bond rates — which follow interest rates — around the world have decreased. The ten-year US Treasury yield — which was as high as 16 per cent in 1981 — is now just about 1.5 per cent.
+    Bond yields have fallen globally since the UK Brexit referendum on June 23. This has made even more acute a problem for financing pensions, which has been growing for many years.
+
+    For more than three decades, bond yields — which follow interest rates — around the world have decreased. The ten-year US Treasury yield — which was as high as 16 per cent in 1981 — is now just about 1.5 per cent.
     {% endmarkdown %}
     <div id="interest-rates-chart"></div>
     <div class="sourceline">Source: Thomson Reuters Datastream</div>
@@ -9,7 +11,9 @@
 
   <div class="step">
     {% markdown %}
-    When US long-term interest rates were nearly 16 per cent, pension funds wanting an annual payout of $16m could buy $100m worth of bonds. But now with an interest rate of 1.5 per cent, pension funds only receive an annual payout of $1.5m with a $100m bond.
+    These yields are treated as a "risk-free rate," which underpins the pricing of all other bonds and many other financial transactions. It also critically affects the price that pension funds must pay to meet their guarantees to their employees.
+
+    For example, when US long-term interest rates were nearly 16 per cent, a pension fund wanting an annual payout of $16m would need only to buy $100m worth of bonds. But now with an interest rate of 1.5 per cent, a pension fund would only receive an annual payout of $1.5m from a $100m bond.
     {% endmarkdown %}
     <div class="bar-graphic">
       <div class="pf-liability"></div>
@@ -28,9 +32,9 @@
 
   <div class="step">
     {% markdown %}
-    This is particularly bad for pension funds, which rely on bonds to fund yearly payouts. To make up the difference for lower interest rates, pension funds have to spend more to get the same annual return.
+    This is particularly bad for pension funds, which rely on bonds to fund yearly payouts. To make up for lower interest rates, they have to spend more to get the same annual return.
 
-    To continue the example, you would need to invest as much as $1.1bn at 1.5 per cent interest rates to make the same amount you would have made with 16 per cent interest rates and $100m, all other things equal.
+    To continue the simplified example, you would need to invest as much as $1.1bn at 1.5 per cent interest rates to make the same amount you would have made with 16 per cent interest rates and $100m, all other things equal.
     {% endmarkdown %}
     <div class="bar-graphic bar-graphic-second">
       <div class="pf-liability"></div>
@@ -49,7 +53,7 @@
 
   <div class="step">
     {% markdown %}
-    Add to that the fact that people are living longer.
+    Add to that the fact that people are living longer. That means that pension funds must be prepared to pay out for longer and hence their liabilities grow.
     {% endmarkdown %}
     <div id="life-expectancies-chart"></div>
     <div class="sourceline">Source: UN</div>
@@ -57,22 +61,26 @@
 
   <div class="step">
     {% markdown %}
-    Pension funds are on the hook for more money every year.
+    A further problem for pension funds is that their assets have not grown as fast in recent years, thanks to problems in the stock market. As their liabilities have grown much faster than assets, so their deficits — the gap between the money they have and the money it will take to pay their pensioners — have deepened.
     {% endmarkdown %}
     <div id="assets-liabilities-chart"></div>
-    <div class="sourceline">Source: Ryan ALM, Inc</div>
+    <div class="sourceline">Average results US public and private DB pension funds. <br />Source: Ryan ALM, Inc</div>
   </div>
 
   <div class="step">
     {% markdown %}
-    Let's look at some real numbers. The US public pension deficit is [$3.4tn](http://www.ft.com/cms/s/0/c9966bea-fcd8-11e5-b5f5-070dca6d0a0d.html). That's 6 times the size of Apple. Pensions deficits sponsored by S&P 1500 companies are lower at $638bn, but still higher than the GDP of some countries, such as Peru or Poland. The UK public and private pension deficits are smaller, but follow the same pattern.
+    Let's look at some real numbers. The US public pension deficit is [$3.4tn](http://www.ft.com/cms/s/0/c9966bea-fcd8-11e5-b5f5-070dca6d0a0d.html). That's 6 times the size of Apple. Pension deficits sponsored by S&P 1500 companies are lower at $638bn, but still higher than the GDP of many countries, such as Peru or Belgium. The UK public and private pension deficits are smaller, but follow the same pattern.
     {% endmarkdown %}
   </div>
 
   <div class="step">
     <div id="compare-pds">
       <h2 class="o-typography-heading2">Interactive: How big is the pension deficit?</h2>
-      <p class="interactive-sentence">The <span id="publicprivate"><span class="interactive-option" id="interactive-option--public" role="button" aria-pressed="true">public</span> <span class="interactive-option" id="interactive-option--private" role="button" aria-pressed="false">private</span></span> pension deficit in the <span id="usuk"><span class="interactive-option" id="interactive-option--us" role="button" aria-pressed="true">US</span> <span class="interactive-option" id="interactive-option--uk" role="button" aria-pressed="false">UK</span></span> is <br /><span id="interactive-result"></span><br /> than <input type="text" id="interactive-compare" placeholder="Company or country" />.</p>
+      <p>The scale of the numbers is in the pension shortfall can be difficult to conceive. Use our random generator to put the scale of the problem into context.</p>
+      <p class="interactive-sentence">
+        The <span id="publicprivate"><span class="interactive-option" id="interactive-option--public" role="button" aria-pressed="true">public</span> <span class="interactive-option" id="interactive-option--private" role="button" aria-pressed="false">private</span></span> pension deficit in the <span id="usuk"><span class="interactive-option" id="interactive-option--us" role="button" aria-pressed="true">US</span> <span class="interactive-option" id="interactive-option--uk" role="button" aria-pressed="false">UK</span></span> is <br /><span id="interactive-result"></span><br /> than <input type="text" id="interactive-compare" placeholder="Company or country" />.
+        <span id="error">The company or country you searched for does not exist.</span>
+      </p>
       <p id="tweetable"></p>
       <button class="o-buttons o-buttons--standout" id="random">Generate random</button>
       <button class="o-buttons o-buttons--standout" id="tweet">Tweet</button>

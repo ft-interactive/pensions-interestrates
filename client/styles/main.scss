@@ -83,6 +83,10 @@ $share-button-size: 38px;
     width: 100%;
   }
 
+  .step:first-of-type {
+    margin-top: 0;
+  }
+
   svg {
     overflow: visible;
 
@@ -278,7 +282,7 @@ $share-button-size: 38px;
     }
 
     .interactive-sentence {
-      margin: 3em 0;
+      margin: 2em 0 1em 0;
       font-family: MetricWeb, sans-serif;
       font-size: 1.2em;
       line-height: 3em;
@@ -306,6 +310,13 @@ $share-button-size: 38px;
 
     input {
       width: 200px;
+    }
+
+    #error {
+      color: red;
+      display: block;
+      font-size: 0.8em;
+      display: none;
     }
 
     #tweetable {

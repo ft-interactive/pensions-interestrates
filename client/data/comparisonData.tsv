@@ -16,7 +16,7 @@ country	Burkina Faso	0.0110994731
 country	Bangladesh	0.1950786658
 country	Bulgaria	0.04895295908
 country	Bahrain	0.03222148936
-country	Bahamas, The	0.008884441432
+country	the Bahamas	0.008884441432
 country	Bosnia and Herzegovina	0.01599539212
 country	Belarus	0.05460896263
 country	Belize	0.001763
@@ -46,9 +46,7 @@ country	Dominica	0.0005377777778
 country	Denmark	0.2951643133
 country	Dominican Republic	0.06710326386
 country	Algeria	0.1668386178
-country	East Asia & Pacific (excluding high income)	13.06736584
 country	East Asia & Pacific	21.28119021
-country	Europe & Central Asia (excluding high income)	2.887774281
 country	Europe & Central Asia	19.98555726
 country	Ecuador	0.10087177
 country	Egypt, Arab Rep.	0.3307785507
@@ -57,7 +55,6 @@ country	Spain	1.199057336
 country	Estonia	0.02269148275
 country	Ethiopia	0.0615371431
 country	European Union	16.22946416
-country	Fragile and conflict affected situations	0.6994405506
 country	Finland	0.2298103582
 country	Fiji	0.004386008745
 country	France	2.421682378
@@ -97,7 +94,6 @@ country	St. Kitts and Nevis	0.0009218888519
 country	Korea, Rep.	1.377873108
 country	Kosovo	0.006385937673
 country	Kuwait	0.1128115653
-country	Latin America & Caribbean (excluding high income)	4.260813401
 country	Lao PDR	0.01232748834
 country	Lebanon	0.04710287363
 country	Liberia	0.002053
@@ -133,9 +129,7 @@ country	Netherlands	0.7525474104
 country	Norway	0.388314891
 country	Nepal	0.02088054591
 country	New Zealand	0.1737540752
-country	OECD members	45.83797561
 country	Oman	0.07025487646
-country	Other small states	0.3680456698
 country	Pakistan	0.2699714981
 country	Panama	0.0521322897
 country	Peru	0.1920837214
@@ -159,10 +153,8 @@ country	Sierra Leone	0.004474689706
 country	El Salvador	0.0258502
 country	Somalia	0.005953
 country	Serbia	0.03651302713
-country	Sub-Saharan Africa (excluding high income)	1.571434112
 country	South Sudan	0.009015221096
 country	Sub-Saharan Africa	1.572873067
-country	Small states	0.4477020721
 country	Suriname	0.004877888604
 country	Slovak Republic	0.08658178995
 country	Slovenia	0.04274698084
@@ -170,16 +162,11 @@ country	Sweden	0.4926180686
 country	Swaziland	0.004060072444
 country	Seychelles	0.001437722206
 country	Chad	0.01088879811
-country	East Asia & Pacific (IDA & IBRD countries)	13.0424814
-country	Europe & Central Asia (IDA & IBRD countries)	3.411289678
 country	Togo	0.004002723817
 country	Thailand	0.395281581
 country	Tajikistan	0.007853450374
 country	Turkmenistan	0.03733423226
-country	Latin America & the Caribbean (IDA & IBRD countries)	4.970640374
 country	Timor-Leste	0.001412377919
-country	South Asia (IDA & IBRD)	2.666094332
-country	Sub-Saharan Africa (IDA & IBRD countries)	1.572873067
 country	Trinidad and Tobago	0.02780574596
 country	Tunisia	0.04301508972
 country	Turkey	0.7182210783

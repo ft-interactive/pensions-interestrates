@@ -51,15 +51,15 @@ function changeTweetText() {
       barChart += '▇';
     }
     if (result.indexOf('bigger') > 0) {
-      barChart += ` ${usUk} deficit`;
+      barChart += `%20${usUk} deficit`;
     } else {
-      barChart += ` ${companyCountry}`;
+      barChart += `%20${companyCountry}`;
     }
     barChart += '%0D%0A▇';
     if (result.indexOf('bigger') > 0) {
-      barChart += ` ${companyCountry}`;
+      barChart += `%20${companyCountry}`;
     } else {
-      barChart += ` ${usUk} deficit`;
+      barChart += `%20${usUk} deficit`;
     }
     barChart += '%0D%0A';
 

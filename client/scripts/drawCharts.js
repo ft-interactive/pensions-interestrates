@@ -75,7 +75,7 @@ const config = {
     type: 'area',
     areaLabel: 'Liability gap',
     areaLabelPlacement: { x: '01-Jan-2014', y: 250 },
-    yAxisLabel: 'Rebased',
+    yAxisLabel: 'Cumulative returns rebased',
     yScale: [0, 450],
     xDomain: ['01-Dec-1999', '01-Jul-2016'],
     columns: [
@@ -120,7 +120,7 @@ function percentEncode(string) {
 
 document.getElementById('tweet').addEventListener('click', () => {
   const baseURL = `https://twitter.com/intent/tweet?url=http://${window.location.hostname + window.location.pathname}`;
-  const text = percentEncode(document.getElementById('tweetable').innerHTML);
+  const text = document.getElementById('tweetable').innerText;
 
   const tweetText = `&text=${text}`;
   const related = '&related=ft';

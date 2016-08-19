@@ -120,7 +120,7 @@ function percentEncode(string) {
 
 document.getElementById('tweet').addEventListener('click', () => {
   const baseURL = `https://twitter.com/intent/tweet?url=http://${window.location.hostname + window.location.pathname}`;
-  const text = document.getElementById('tweetable').innerHTML;
+  const text = percentEncode(document.getElementById('tweetable').innerHTML);
 
   const tweetText = `&text=${text}`;
   const related = '&related=ft';

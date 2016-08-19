@@ -3,7 +3,7 @@
 import * as _ from 'underscore';
 
 function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ', ');
 }
 
 function htmlEncode(s) {
@@ -20,31 +20,55 @@ function changeTweetText() {
   const publicPrivate = $('#publicprivate .interactive-option[aria-pressed=true]').text();
   const companyCountry = $('#interactive-compare').val();
   const result = $('#interactive-result').text();
-  const multiplier = result.replace(/,/, '').match(/\d+/)[0];
+  const multiplier = result.replace(/,/g, '').match(/\d+/)[0];
 
-  let sentence = `The ${usUk} ${publicPrivate} pension deficit is ${result} than ${companyCountry}`;
-
-  let barChart = '%0D%0A';
-  for (let i = 0; i < multiplier; i++) {
-    barChart += '▇';
+  let unit = '';
+  if (['Afghanistan', 'Angola', 'Albania', 'Arab World', 'United Arab Emirates', 'Armenia', 'Antigua and Barbuda', 'Australia', 'Austria', 'Azerbaijan', 'Burundi', 'Belgium', 'Benin', 'Burkina Faso', 'Bangladesh', 'Bulgaria', 'Bahrain', 'Bahamas, The', 'Bosnia and Herzegovina', 'Belarus', 'Belize', 'Bolivia', 'Brazil', 'Barbados', 'Brunei Darussalam', 'Bhutan', 'Botswana', 'Central African Republic', 'Canada', 'Central Europe and the Baltics', 'Switzerland', 'Chile', 'China', 'Cote d\'Ivoire', 'Cameroon', 'Congo, Rep.', 'Colombia', 'Cabo Verde', 'Costa Rica', 'Caribbean small states', 'Cyprus', 'Czech Republic', 'Germany', 'Dominica', 'Denmark', 'Dominican Republic', 'Algeria', 'East Asia & Pacific (excluding high income)', 'Early-demographic dividend', 'East Asia & Pacific', 'Europe & Central Asia (excluding high income)', 'Europe & Central Asia', 'Ecuador', 'Egypt, Arab Rep.', 'Euro area', 'Spain', 'Estonia', 'Ethiopia', 'European Union', 'Fragile and conflict affected situations', 'Finland', 'Fiji', 'France', 'Gabon', 'United Kingdom', 'Georgia', 'Ghana', 'Guinea', 'Guinea-Bissau', 'Equatorial Guinea', 'Greece', 'Grenada', 'Guatemala', 'Guyana', 'High income', 'Hong Kong SAR, China', 'Honduras', 'Heavily indebted poor countries (HIPC)', 'Croatia', 'Haiti', 'Hungary', 'IBRD only', 'IDA & IBRD total', 'IDA total', 'IDA blend', 'Indonesia', 'IDA only', 'India', 'Ireland', 'Iraq', 'Iceland', 'Israel', 'Italy', 'Jamaica', 'Jordan', 'Japan', 'Kazakhstan', 'Kenya', 'Kyrgyz Republic', 'Cambodia', 'Kiribati', 'St. Kitts and Nevis', 'Korea, Rep.', 'Kosovo', 'Kuwait', 'Latin America & Caribbean (excluding high income)', 'Lao PDR', 'Lebanon', 'Liberia', 'Libya', 'St. Lucia', 'Latin America & Caribbean', 'Least developed countries: UN classification', 'Low income', 'Sri Lanka', 'Lower middle income', 'Low & middle income', 'Late-demographic dividend', 'Lithuania', 'Luxembourg', 'Latvia', 'Macao SAR, China', 'Morocco', 'Moldova', 'Madagascar', 'Maldives', 'Middle East & North Africa', 'Mexico', 'Middle income', 'Macedonia, FYR', 'Mali', 'Myanmar', 'Montenegro', 'Mongolia', 'Mozambique', 'Mauritius', 'Malawi', 'Malaysia', 'North America', 'Namibia', 'Niger', 'Nigeria', 'Nicaragua', 'Netherlands', 'Norway', 'Nepal', 'New Zealand', 'OECD members', 'Oman', 'Other small states', 'Pakistan', 'Panama', 'Peru', 'Philippines', 'Palau', 'Poland', 'Pre-demographic dividend', 'Portugal', 'Paraguay', 'Pacific island small states', 'Post-demographic dividend', 'Qatar', 'Romania', 'Russian Federation', 'Rwanda', 'South Asia', 'Saudi Arabia', 'Sudan', 'Senegal', 'Singapore', 'Solomon Islands', 'Sierra Leone', 'El Salvador', 'Somalia', 'Serbia', 'Sub-Saharan Africa (excluding high income)', 'South Sudan', 'Sub-Saharan Africa', 'Small states', 'Suriname', 'Slovak Republic', 'Slovenia', 'Sweden', 'Swaziland', 'Seychelles', 'Chad', 'East Asia & Pacific (IDA & IBRD countries)', 'Europe & Central Asia (IDA & IBRD countries)', 'Togo', 'Thailand', 'Tajikistan', 'Turkmenistan', 'Latin America & the Caribbean (IDA & IBRD countries)', 'Timor-Leste', 'South Asia (IDA & IBRD)', 'Sub-Saharan Africa (IDA & IBRD countries)', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Tanzania', 'Uganda', 'Ukraine', 'Upper middle income', 'Uruguay', 'United States', 'Uzbekistan', 'St. Vincent and the Grenadines', 'Vietnam', 'West Bank and Gaza', 'World', 'Samoa', 'South Africa', 'Congo, Dem. Rep.', 'Zambia', 'Zimbabwe'].indexOf(companyCountry) > -1) {
+    unit = '\'s GDP';
   }
-  if (result.indexOf('bigger') > 0) {
-    barChart += ` ${usUk} deficit`;
+
+  let deficitVal;
+  if (usUk === 'UK') {
+    if (publicPrivate === 'public') {
+      deficitVal = '$984bn';
+    } else {
+      deficitVal = '$196bn';
+    }
   } else {
-    barChart += ` ${companyCountry}`;
+    if (publicPrivate === 'public') {
+      deficitVal = '$3.4tn';
+    } else {
+      deficitVal = '$638bn';
+    }
   }
-  barChart += '%0D%0A▇';
-  if (result.indexOf('bigger') > 0) {
-    barChart += ` ${companyCountry}`;
-  } else {
-    barChart += ` ${usUk} deficit`;
-  }
-  barChart += '%0D%0A';
-  const barChartLength = barChart.length;
+  let availableSpace;
 
-  const availableSpace = maxChars - sentence.length - barChartLength - 16; // minus 16 for link
-  if (availableSpace >= 0) {
-    sentence += barChart;
+  let sentence = `The ${usUk} ${publicPrivate} pension deficit (${deficitVal}) is ${result} than ${companyCountry}${unit}`;
+
+  if (multiplier <= 7 && multiplier >= 2) { // if too long, will overflow into two lines.
+    let barChart = '%0D%0A';
+    for (let i = 0; i < multiplier; i++) {
+      barChart += '▇';
+    }
+    if (result.indexOf('bigger') > 0) {
+      barChart += ` ${usUk} deficit`;
+    } else {
+      barChart += ` ${companyCountry}`;
+    }
+    barChart += '%0D%0A▇';
+    if (result.indexOf('bigger') > 0) {
+      barChart += ` ${companyCountry}`;
+    } else {
+      barChart += ` ${usUk} deficit`;
+    }
+    barChart += '%0D%0A';
+
+    availableSpace = maxChars - sentence.length - barChart.length - 23 + 20; // minus 23 for link, add 20 because %0D%0A doesn't count
+    if (availableSpace >= 0) {
+      sentence += barChart;
+    }
+
+    sentence = sentence.replace(/&/g, '%26');
   }
 
   document.getElementById('tweetable').innerText = sentence;

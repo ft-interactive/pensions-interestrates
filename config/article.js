@@ -11,13 +11,13 @@ export default _ => ({ // eslint-disable-line
   //       new Date('2016-05-17T17:11:22Z')
   publishedDate: new Date(),
 
-  headline: 'Interest rates and pension deficits',
+  headline: 'Explainer: How do decreasing interest rates affect pension schemes?',
 
-  summary: 'Explainer: How decreasing interest rates affects pension deficits',
+  summary: 'A walk through bond math and the scale of pension deficits',
 
   topic: {
-    name: 'Starter Kit',
-    url: '/foo',
+    name: 'Capital Markets',
+    url: 'http://www.ft.com/markets/capital-markets',
   },
 
   // relatedArticle: {

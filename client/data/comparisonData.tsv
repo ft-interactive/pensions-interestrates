@@ -50,16 +50,16 @@ country	East Asia & Pacific	21.28119021
 country	Europe & Central Asia	19.98555726
 country	Ecuador	0.10087177
 country	Egypt, Arab Rep.	0.3307785507
-country	Euro area	11.5397442
+country	the Euro area	11.5397442
 country	Spain	1.199057336
 country	Estonia	0.02269148275
 country	Ethiopia	0.0615371431
-country	European Union	16.22946416
+country	the European Union	16.22946416
 country	Finland	0.2298103582
 country	Fiji	0.004386008745
 country	France	2.421682378
 country	Gabon	0.01433972393
-country	United Kingdom	2.848755449
+country	the United Kingdom	2.848755449
 country	Georgia	0.0139653858
 country	Ghana	0.03786436822
 country	Guinea	0.006699203543
@@ -108,7 +108,7 @@ country	Morocco	0.1003595464
 country	Moldova	0.006551161404
 country	Madagascar	0.009980522718
 country	Maldives	0.003142812004
-country	Middle East & North Africa	3.113597975
+country	the Middle East & North Africa	3.113597975
 country	Mexico	1.144331343
 country	Macedonia, FYR	0.01008602126
 country	Mali	0.0131002637
@@ -137,17 +137,16 @@ country	Palau	0.0002874
 country	Poland	0.474783393
 country	Portugal	0.198931394
 country	Paraguay	0.02762277872
-country	Pacific island small states	0.008625970093
 country	Qatar	0.1669076923
 country	Romania	0.1779544899
-country	Russian Federation	1.326015097
+country	the Russian Federation	1.326015097
 country	Rwanda	0.008095980014
 country	South Asia	2.666094332
 country	Saudi Arabia	0.6460018667
 country	Sudan	0.08406677098
 country	Senegal	0.01377957071
 country	Singapore	0.2927393075
-country	Solomon Islands	0.001156834751
+country	the Solomon Islands	0.001156834751
 country	Sierra Leone	0.004474689706
 country	El Salvador	0.0258502
 country	Somalia	0.005953
@@ -155,7 +154,7 @@ country	Serbia	0.03651302713
 country	South Sudan	0.009015221096
 country	Sub-Saharan Africa	1.572873067
 country	Suriname	0.004877888604
-country	Slovak Republic	0.08658178995
+country	the Slovak Republic	0.08658178995
 country	Slovenia	0.04274698084
 country	Sweden	0.4926180686
 country	Swaziland	0.004060072444
@@ -173,7 +172,7 @@ country	Tanzania	0.04489539208
 country	Uganda	0.02636924228
 country	Ukraine	0.09061502332
 country	Uruguay	0.05344269757
-country	United States	17.946996
+country	the United States	17.946996
 country	Uzbekistan	0.06673280139
 country	St. Vincent and the Grenadines	0.000751373263
 country	Vietnam	0.1935993791

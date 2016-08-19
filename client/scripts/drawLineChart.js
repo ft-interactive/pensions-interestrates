@@ -89,7 +89,8 @@ export function drawLineChart(data, config, windowWidth) {
       .append('path')
       .attr('d', (d) => area(d))
       .style('stroke', 'none')
-      .style('fill', '#EFD9BC');
+      .style('fill', '#EFD9BC')
+      .style('opacity', 0.7);
 
     annotationGroup.append('text')
       .attr('class', 'annotationLabel')

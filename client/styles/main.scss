@@ -71,10 +71,6 @@ $share-button-size: 38px;
 
   img {
     width: 100%;
-  //   background: white;
-  //   border-radius: 10px;
-  //   box-shadow: 0 1px 1px 0 #cec6b9;
-  //   padding: 1em;
     margin: 1em 0;
   }
 
@@ -279,6 +275,14 @@ $share-button-size: 38px;
 
     h2 {
       margin-top: 0.5em;
+      margin-bottom: 0;
+      text-align: left;
+      padding: 0 0.83em;
+    }
+
+    #instructions {
+      text-align: left; 
+      padding: 1em;
     }
 
     .interactive-sentence {
@@ -324,9 +328,10 @@ $share-button-size: 38px;
     }
 
     .sourceline {
-      margin-top: 2em;
+      margin-top: 4em;
       padding-bottom: 1em;
       margin-left: 1em;
+      margin-right: 1em;
     }
   }
 }

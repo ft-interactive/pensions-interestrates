@@ -106,15 +106,9 @@ export function loadComparisonInteractive(data) {
       }
     }
 
-    const name = document.getElementById('interactive-compare').value;
-    const category = document.getElementById('interactive-compare').category;
-
-    let value;
-    if (category === 'country') {
-      value = _.findWhere(data, { name }).value; // original country data in trillions
-    } else {
-      value = _.findWhere(data, { name }).value; // original company data in trillions
-    }
+    const originalName = document.getElementById('interactive-compare').value;
+    const name = originalName.replace(/ \(.*\)/, '');
+    const value = _.findWhere(data, { name }).value;
 
     let multiplyFactor = pensionDeficit / value;
     let interactiveText;
@@ -136,7 +130,7 @@ export function loadComparisonInteractive(data) {
       interactiveText = `${multiplyFactor} times bigger`;
     }
 
-    document.getElementById('interactive-compare').value = name;
+    document.getElementById('interactive-compare').value = originalName;
     document.getElementById('interactive-result').innerHTML = interactiveText;
 
     changeTweetText();
@@ -159,21 +153,48 @@ export function loadComparisonInteractive(data) {
     getResult();
   });
 
+  let formattedAutocompleteData = [];
+  formattedAutocompleteData = _.map(data, (v) => {
+    let unit = 'market cap';
+    if (v.category === 'country') {
+      unit = 'GDP';
+    }
+    return {
+      value: v.value,
+      label: v.name,
+      desc: `${v.name} (${unit})`,
+    };
+  });
 
-  const list = _.pluck(data, 'name');
   $('#interactive-compare').autocomplete({
-    source: list,
+    source: formattedAutocompleteData,
+    focus: (event, ui) => {
+      $('#interactive-compare').val(ui.item.desc);
+      return false;
+    },
     minLength: 2,
     delay: 500,
     select: function select(e, ui) {
+      $('#project').val(ui.item.desc);
+      $('#project-id').val(ui.item.value);
+      $('#project-description').html(ui.item.desc);
+
       if (ui.item) {
-        $(e.target).val(ui.item.value);
+        $(e.target).val(ui.item.desc);
       }
       const name = $(this).val();
       getResult(name);
+
+      return false;
     },
   });
 
-  document.getElementById('interactive-compare').value = 'Apple Inc';
+  $('#interactive-compare').autocomplete('instance')._renderItem = function (ul, item) {
+    return $('<li>')
+      .append(`<div>${item.desc}</div>`)
+      .appendTo(ul);
+  };
+
+  document.getElementById('interactive-compare').value = 'Apple Inc (market cap)';
   getResult(); // start page with this
 }

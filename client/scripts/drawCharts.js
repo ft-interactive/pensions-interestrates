@@ -47,7 +47,7 @@ const config = {
     type: 'line',
     head: 'Lives and retirements are growing longer',
     yAxisLabel: 'years',
-    yScale: [68, 80],
+    yScale: [68, 81],
     xDomain: [1960, 2013],
     labelBreakpoint: 600,
     columns: [
@@ -83,7 +83,7 @@ const config = {
     type: 'area',
     head: 'Assets are not growing as fast as liabilities',
     areaLabel: 'Liability gap',
-    areaLabelPlacement: { x: '01-Jan-2016', y: 250 },
+    areaLabelPlacement: { x: '01-Jan-2016', y: 230 },
     yAxisLabel: 'Cumulative returns rebased',
     yScale: [0, 450],
     xDomain: ['01-Dec-1999', '01-Jul-2016'],

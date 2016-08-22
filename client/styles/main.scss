@@ -254,7 +254,7 @@ $share-button-size: 38px;
       }
 
       .pf-principle:before {
-        content: "$1.1bn";
+        content: "$1.07bn";
       }
 
       .pf-interest-1point5 {
@@ -307,13 +307,16 @@ $share-button-size: 38px;
     }
 
     #interactive-result {
-      color: #27757b;
+      color: #af516c;
       font-weight: 600;
-      font-size: 2em;
+      font-size: 1.5em;
     }
 
     input {
       width: 200px;
+      color: #af516c;
+      font-weight: 600;
+      font-size: 1.5em;
     }
 
     #error {

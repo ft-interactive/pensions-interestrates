@@ -11,9 +11,9 @@ export default _ => ({ // eslint-disable-line
   //       new Date('2016-05-17T17:11:22Z')
   publishedDate: new Date(),
 
-  headline: 'Explainer: How do decreasing interest rates affect pension schemes?',
+  headline: 'Pensions\' painful arithmetic',
 
-  summary: 'A walk through bond math and the scale of pension deficits',
+  summary: 'Bond mathematics and the scale of pension deficits explained',
 
   topic: {
     name: 'Capital Markets',
@@ -29,14 +29,14 @@ export default _ => ({ // eslint-disable-line
   // if array of authors, url is optional
   byline: [
     { name: 'Joanna S Kao', url: 'https://twitter.com/joannaskao' },
-    { name: 'John Authers', url: 'https://twitter.com/johnauthers'},
+    { name: 'John Authers', url: 'https://twitter.com/johnauthers' },
   ],
 
   // Appears in the HTML <title>
-  title: '',
+  title: 'Pensions\' painful arithmetic',
 
   // meta data
-  description: '',
+  description: 'Bond mathematics and the scale of pension deficits explained',
 
   /*
   TODO: Select Twitter card type -

@@ -36,7 +36,7 @@ function changeTweetText() {
   let deficitVal;
   if (usUk === 'UK') {
     if (publicPrivate === 'public') {
-      deficitVal = '$1.97tn';
+      deficitVal = '$61.72bn';
     } else {
       deficitVal = '$196bn';
     }
@@ -95,7 +95,7 @@ export function loadComparisonInteractive(data) {
     let pensionDeficit; // in US trillions
     if (document.getElementById('interactive-option--uk').getAttribute('aria-pressed') === 'true') {
       if (document.getElementById('interactive-option--public').getAttribute('aria-pressed') === 'true') {
-        pensionDeficit = 1.97; // UK public
+        pensionDeficit = 0.06172; // UK public
       } else {
         pensionDeficit = 0.196; // UK private
       }

@@ -19,6 +19,7 @@ function changeTweetText() {
   const usUk = $('#usuk .interactive-option[aria-pressed=true]').text();
   const publicPrivate = $('#publicprivate .interactive-option[aria-pressed=true]').text();
   const companyCountry = $('#interactive-compare').val();
+  const companyCountryStripped = companyCountry.replace(/ \(.*\)/, '');
   const result = $('#interactive-result').text();
   let multiplier;
   if (result.indexOf('smaller') >= 0) {
@@ -48,7 +49,7 @@ function changeTweetText() {
   }
   let availableSpace;
 
-  let sentence = `The ${usUk} ${publicPrivate} pension deficit (${deficitVal}) is ${result} than ${companyCountry}${unit}`;
+  let sentence = `The ${usUk} ${publicPrivate} pension deficit (${deficitVal}) is ${result} than ${companyCountry}`;
 
   sentence = sentence.replace(/%/g, '%25');
 
@@ -60,11 +61,11 @@ function changeTweetText() {
     if (result.indexOf('bigger') > 0) {
       barChart += `%20${usUk} deficit`;
     } else {
-      barChart += `%20${companyCountry}`;
+      barChart += `%20${companyCountryStripped}`;
     }
     barChart += '%0D%0A▇';
     if (result.indexOf('bigger') > 0) {
-      barChart += `%20${companyCountry}`;
+      barChart += `%20${companyCountryStripped}`;
     } else {
       barChart += `%20${usUk} deficit`;
     }
@@ -138,7 +139,12 @@ export function loadComparisonInteractive(data) {
 
   document.getElementById('random').addEventListener('click', () => {
     const randomId = Math.floor(Math.random() * data.length);
-    const name = data[randomId].name;
+    let unit = '(GDP)';
+    if (data[randomId].category === 'company') {
+      unit = '(market cap)';
+    }
+
+    const name = `${data[randomId].name} ${unit}`;
 
     document.getElementById('interactive-compare').value = name;
     getResult();

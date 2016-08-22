@@ -313,10 +313,11 @@ $share-button-size: 38px;
     }
 
     input {
-      width: 200px;
+      width: 400px;
       color: #af516c;
       font-weight: 600;
       font-size: 1.5em;
+      line-height: 1em;
     }
 
     #error {
@@ -372,6 +373,12 @@ $share-button-size: 38px;
       .pf-bar:last-of-type:after {
           width: 15%;
           bottom: -2.5em;
+      }
+    }
+
+    #compare-pds {
+      input {
+        width: 90%;
       }
     }
   }

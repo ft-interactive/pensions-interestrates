@@ -195,6 +195,6 @@ export function loadComparisonInteractive(data) {
       .appendTo(ul);
   };
 
-  document.getElementById('interactive-compare').value = 'Apple Inc (market cap)';
+  document.getElementById('interactive-compare').value = 'Apple (market cap)';
   getResult(); // start page with this
 }

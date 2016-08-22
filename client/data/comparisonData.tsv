@@ -183,508 +183,502 @@ country	South Africa	0.3127975766
 country	Congo, Dem. Rep.	0.03523774228
 country	Zambia	0.02120156425
 country	Zimbabwe	0.0138929405
-company	Apple Inc	0.589711
-company	Alphabet Inc	0.544601
-company	Alphabet Inc	0.544601
-company	Microsoft Corp	0.447797
-company	Berkshire Hathaway Inc	0.367198
-company	Exxon Mobil Corp	0.366585
-company	Amazon.com Inc	0.361879
-company	Facebook Inc	0.356332
+company	Apple	0.589711
+company	Alphabet	0.544601
+company	Microsoft	0.447797
+company	Berkshire Hathaway	0.367198
+company	Exxon Mobil	0.366585
+company	Amazon.com	0.361879
+company	Facebook	0.356332
 company	Johnson & Johnson	0.330518
-company	General Electric Co	0.27977
-company	AT&T Inc	0.255503
-company	Wells Fargo & Co	0.245415
-company	JPMorgan Chase & Co	0.237885
-company	Procter & Gamble Co/The	0.233035
-company	Wal-Mart Stores Inc	0.231879
-company	Verizon Communications Inc	0.215371
-company	Pfizer Inc	0.213268
-company	Chevron Corp	0.19384
-company	Coca-Cola Co/The	0.19079
-company	Visa Inc	0.189679
-company	Merck & Co Inc	0.175411
-company	Oracle Corp	0.170104
-company	Home Depot Inc/The	0.168613
-company	Intel Corp	0.165514
-company	Comcast Corp	0.162919
-company	PepsiCo Inc	0.156321
-company	Walt Disney Co/The	0.155776
-company	Bank of America Corp	0.15547
-company	Philip Morris International Inc	0.155226
-company	International Business Machines Corp	0.154725
-company	Cisco Systems Inc	0.153525
-company	UnitedHealth Group Inc	0.135716
-company	Citigroup Inc	0.135507
-company	Amgen Inc	0.131435
-company	Altria Group Inc	0.129578
-company	Medtronic PLC	0.120805
-company	Schlumberger Ltd	0.116026
-company	AbbVie Inc	0.109666
-company	Kraft Heinz Co/The	0.109102
-company	3M Co	0.108471
-company	Gilead Sciences Inc	0.107156
-company	MasterCard Inc	0.104988
-company	CVS Health Corp	0.103631
-company	Allergan plc	0.100699
-company	McDonald's Corp	0.10002
-company	Bristol-Myers Squibb Co	0.09888659046
-company	United Parcel Service Inc	0.09687698637
-company	NIKE Inc	0.0960605225
-company	QUALCOMM Inc	0.09206618522
-company	United Technologies Corp	0.09144263475
-company	Walgreens Boots Alliance Inc	0.08921542656
-company	Eli Lilly & Co	0.08824124211
-company	Honeywell International Inc	0.08812450611
-company	Celgene Corp	0.0871616512
-company	Boeing Co/The	0.08452841472
-company	Starbucks Corp	0.08155762688
-company	Union Pacific Corp	0.07991808
-company	Lockheed Martin Corp	0.07724097536
+company	General Electric	0.27977
+company	AT&T	0.255503
+company	Wells Fargo	0.245415
+company	JPMorgan Chase	0.237885
+company	Procter & Gamble	0.233035
+company	Wal-Mart	0.231879
+company	Verizon	0.215371
+company	Pfizer	0.213268
+company	Chevron	0.19384
+company	Coca-Cola	0.19079
+company	Visa	0.189679
+company	Merck	0.175411
+company	Oracle	0.170104
+company	Home Depot	0.168613
+company	Intel	0.165514
+company	Comcast	0.162919
+company	PepsiCo	0.156321
+company	Walt Disney	0.155776
+company	Bank of America	0.15547
+company	Philip Morris International	0.155226
+company	IBM	0.154725
+company	Cisco	0.153525
+company	UnitedHealth Group	0.135716
+company	Citigroup	0.135507
+company	Amgen	0.131435
+company	Altria Group	0.129578
+company	Medtronic	0.120805
+company	Schlumberger	0.116026
+company	AbbVie	0.109666
+company	Kraft Heinz	0.109102
+company	3M	0.108471
+company	Gilead Sciences	0.107156
+company	MasterCard	0.104988
+company	CVS Health	0.103631
+company	Allergan	0.100699
+company	McDonald's	0.10002
+company	Bristol-Myers Squibb	0.09888659046
+company	UPS	0.09687698637
+company	NIKE	0.0960605225
+company	QUALCOMM	0.09206618522
+company	United Technologies	0.09144263475
+company	Walgreens Boots Alliance	0.08921542656
+company	Eli Lilly	0.08824124211
+company	Honeywell	0.08812450611
+company	Celgene	0.0871616512
+company	Boeing	0.08452841472
+company	Starbucks	0.08155762688
+company	Union Pacific	0.07991808
+company	Lockheed Martin	0.07724097536
 company	US Bancorp	0.0740238295
-company	Accenture PLC	0.07360621773
-company	Costco Wholesale Corp	0.07340883968
-company	Reynolds American Inc	0.07243757158
-company	Priceline Group Inc/The	0.07135992218
-company	Goldman Sachs Group Inc/The	0.07065010176
-company	Texas Instruments Inc	0.07029992653
-company	Broadcom Ltd	0.06861060915
-company	Biogen Inc	0.0685387817
-company	Lowe's Cos Inc	0.0680439808
-company	Simon Property Group Inc	0.06722357248
-company	Mondelez International Inc	0.0670374912
-company	Colgate-Palmolive Co	0.06652321792
+company	Accenture	0.07360621773
+company	Costco Wholesale	0.07340883968
+company	Reynolds American	0.07243757158
+company	Priceline	0.07135992218
+company	Goldman Sachs	0.07065010176
+company	Texas Instruments	0.07029992653
+company	Broadcom	0.06861060915
+company	Biogen	0.0685387817
+company	Lowe's	0.0680439808
+company	Simon Property Group	0.06722357248
+company	Mondelez International	0.0670374912
+company	Colgate-Palmolive	0.06652321792
 company	Abbott Laboratories	0.0651648983
-company	American International Group Inc	0.06327064986
-company	Time Warner Inc	0.06302077747
-company	BlackRock Inc	0.06082853683
-company	Thermo Fisher Scientific Inc	0.06069676851
-company	American Express Co	0.06064621568
-company	EI du Pont de Nemours & Co	0.06020601856
-company	Dow Chemical Co/The	0.05957551718
-company	Chubb Ltd	0.05906509005
-company	Occidental Petroleum Corp	0.05873065165
+company	AIG	0.06327064986
+company	Time Warner	0.06302077747
+company	BlackRock	0.06082853683
+company	Thermo Fisher Scientific	0.06069676851
+company	American Express	0.06064621568
+company	EI du Pont de Nemours	0.06020601856
+company	Dow Chemical	0.05957551718
+company	Chubb	0.05906509005
+company	Occidental Petroleum	0.05873065165
 company	Morgan Stanley	0.05855870566
-company	NextEra Energy Inc	0.05847653171
-company	Duke Energy Corp	0.05645822362
-company	EMC Corp	0.055789568
-company	Danaher Corp	0.05560215552
+company	NextEra Energy	0.05847653171
+company	Duke Energy	0.05645822362
+company	EMC	0.055789568
+company	Danaher	0.05560215552
 company	ConocoPhillips	0.05378827878
-company	salesforce.com Inc	0.05194392371
-company	TJX Cos Inc/The	0.05158103859
-company	Southern Co/The	0.0506186752
-company	Adobe Systems Inc	0.05010813338
-company	EOG Resources Inc	0.05006451098
-company	Kinder Morgan Inc/DE	0.04971384013
-company	General Motors Co	0.04949730099
-company	Ford Motor Co	0.04906952294
-company	American Tower Corp	0.04871851622
-company	Caterpillar Inc	0.04858466304
-company	Express Scripts Holding Co	0.04847644672
-company	Twenty-First Century Fox Inc	0.047872512
-company	Twenty-First Century Fox Inc	0.047872512
+company	salesforce.com	0.05194392371
+company	TJX	0.05158103859
+company	Southern	0.0506186752
+company	Adobe	0.05010813338
+company	EOG Resources	0.05006451098
+company	Kinder Morgan	0.04971384013
+company	General Motors	0.04949730099
+company	Ford Motor	0.04906952294
+company	American Tower	0.04871851622
+company	Caterpillar	0.04858466304
+company	Express Scripts Holding	0.04847644672
+company	Twenty-First Century Fox	0.047872512
 company	Dominion Resources Inc/VA	0.04774377882
-company	General Dynamics Corp	0.04668019098
-company	PayPal Holdings Inc	0.04599564698
-company	Kimberly-Clark Corp	0.04590754611
-company	Monsanto Co	0.04554723738
-company	MetLife Inc	0.04463630746
-company	FedEx Corp	0.04430657946
-company	McKesson Corp	0.0441764864
-company	Regeneron Pharmaceuticals Inc	0.04338133811
-company	Bank of New York Mellon Corp/The	0.04309134131
-company	Aetna Inc	0.04259413606
-company	General Mills Inc	0.04256827392
-company	Stryker Corp	0.04237286605
-company	Illinois Tool Works Inc	0.04219413299
-company	PNC Financial Services Group Inc/The	0.04217764659
-company	Raytheon Co	0.0420126761
-company	Target Corp	0.04146724864
-company	Netflix Inc	0.04144059597
-company	Automatic Data Processing Inc	0.0409373655
-company	Yahoo! Inc	0.04079340339
+company	General Dynamics	0.04668019098
+company	PayPal	0.04599564698
+company	Kimberly-Clark	0.04590754611
+company	Monsanto	0.04554723738
+company	MetLife	0.04463630746
+company	FedEx	0.04430657946
+company	McKesson	0.0441764864
+company	Regeneron Pharmaceuticals	0.04338133811
+company	Bank of New York Mellon	0.04309134131
+company	Aetna	0.04259413606
+company	General Mills	0.04256827392
+company	Stryker	0.04237286605
+company	Illinois Tool Works	0.04219413299
+company	PNC Financial Services	0.04217764659
+company	Raytheon	0.0420126761
+company	Target	0.04146724864
+company	Netflix	0.04144059597
+company	ADP	0.0409373655
+company	Yahoo!	0.04079340339
 company	Phillips 66	0.0405940224
-company	Charles Schwab Corp/The	0.04011347968
-company	Halliburton Co	0.03972265984
+company	Charles Schwab	0.04011347968
+company	Halliburton	0.03972265984
 company	Public Storage	0.03932483174
-company	Northrop Grumman Corp	0.03896856576
+company	Northrop Grumman	0.03896856576
 company	Becton Dickinson and Co	0.03680849101
-company	Hewlett Packard Enterprise Co	0.03612567552
-company	CME Group Inc	0.03589153178
-company	Ecolab Inc	0.0356329431
-company	Yum! Brands Inc	0.03532766822
-company	Emerson Electric Co	0.03519506022
-company	Capital One Financial Corp	0.03507881165
-company	Estee Lauder Cos Inc/The	0.0349151273
-company	Marsh & McLennan Cos Inc	0.03476595917
-company	Carnival Corp	0.03473727898
-company	eBay Inc	0.03454232986
-company	Praxair Inc	0.0344987689
-company	Cognizant Technology Solutions Corp	0.03442276352
-company	Anthem Inc	0.03439381709
-company	Cigna Corp	0.03434191462
-company	Travelers Cos Inc/The	0.03383269581
-company	Prudential Financial Inc	0.03368395981
-company	Intercontinental Exchange Inc	0.03353915392
-company	Air Products & Chemicals Inc	0.0334006272
-company	Constellation Brands Inc	0.03323152998
-company	NVIDIA Corp	0.03298518016
-company	American Electric Power Co Inc	0.03289044582
-company	Boston Scientific Corp	0.03261021389
-company	PG&E Corp	0.03234753536
-company	LyondellBasell Industries NV	0.03218518835
-company	Exelon Corp	0.03199202509
-company	Crown Castle International Corp	0.03174109389
-company	S&P Global Inc	0.03166944051
-company	Pioneer Natural Resources Co	0.03094750208
-company	Kroger Co/The	0.03076632986
-company	Eaton Corp PLC	0.03075136102
-company	BB&T Corp	0.03073109402
-company	Monster Beverage Corp	0.03057890099
-company	Applied Materials Inc	0.02998413107
-company	Tyson Foods Inc	0.02995177472
-company	Activision Blizzard Inc	0.02986629325
-company	Alexion Pharmaceuticals Inc	0.02984292352
-company	Aflac Inc	0.029653248
-company	Sysco Corp	0.02951133184
-company	Aon PLC	0.02906195149
-company	Kellogg Co	0.0288508375
-company	Intuit Inc	0.02876248883
-company	Waste Management Inc	0.02867801498
-company	Johnson Controls Inc	0.02846897562
-company	HCA Holdings Inc	0.02833409434
-company	Prologis Inc	0.0280970711
-company	Anadarko Petroleum Corp	0.02801390592
-company	Delta Air Lines Inc	0.0277994537
-company	PPG Industries Inc	0.02759350272
-company	Welltower Inc	0.02746283008
-company	O'Reilly Automotive Inc	0.0271189545
-company	CSX Corp	0.02700804096
-company	State Street Corp	0.02695785267
-company	Norfolk Southern Corp	0.02684512666
-company	Humana Inc	0.02674566144
+company	Hewlett Packard	0.03612567552
+company	CME Group	0.03589153178
+company	Ecolab	0.0356329431
+company	Yum! Brands	0.03532766822
+company	Emerson Electric	0.03519506022
+company	Capital One	0.03507881165
+company	Estee Lauder	0.0349151273
+company	Marsh & McLennan	0.03476595917
+company	Carnival	0.03473727898
+company	eBay	0.03454232986
+company	Praxair	0.0344987689
+company	Cognizant Technology Solutions	0.03442276352
+company	Anthem	0.03439381709
+company	Cigna	0.03434191462
+company	Travelers	0.03383269581
+company	Prudential Financial	0.03368395981
+company	Intercontinental Exchange	0.03353915392
+company	Air Products & Chemicals	0.0334006272
+company	Constellation Brands	0.03323152998
+company	NVIDIA	0.03298518016
+company	American Electric Power	0.03289044582
+company	Boston Scientific	0.03261021389
+company	PG&E	0.03234753536
+company	LyondellBasell	0.03218518835
+company	Exelon	0.03199202509
+company	Crown Castle International	0.03174109389
+company	Pioneer Natural Resources	0.03094750208
+company	Kroger	0.03076632986
+company	Eaton Corp	0.03075136102
+company	BB&T	0.03073109402
+company	Monster Beverage	0.03057890099
+company	Applied Materials	0.02998413107
+company	Tyson Foods	0.02995177472
+company	Activision Blizzard	0.02986629325
+company	Alexion Pharmaceuticals	0.02984292352
+company	Aflac	0.029653248
+company	Sysco	0.02951133184
+company	Aon	0.02906195149
+company	Kellogg	0.0288508375
+company	Intuit	0.02876248883
+company	Waste Management	0.02867801498
+company	Johnson Controls	0.02846897562
+company	HCA Holdings	0.02833409434
+company	Prologis	0.0280970711
+company	Anadarko Petroleum	0.02801390592
+company	Delta Air Lines	0.0277994537
+company	PPG Industries	0.02759350272
+company	Welltower	0.02746283008
+company	O'Reilly Automotive	0.0271189545
+company	CSX	0.02700804096
+company	State Street	0.02695785267
+company	Norfolk Southern	0.02684512666
+company	Humana	0.02674566144
 company	Sempra Energy	0.02669727744
-company	Sherwin-Williams Co/The	0.02666036429
-company	VF Corp	0.0264768553
-company	Cardinal Health Inc	0.02638872371
-company	Mylan NV	0.02637541581
-company	Intuitive Surgical Inc	0.02632349491
-company	General Growth Properties Inc	0.02631209779
-company	Illumina Inc	0.02629344256
-company	Equinix Inc	0.02617249792
-company	Baxter International Inc	0.0261609984
-company	Newell Brands Inc	0.02603156685
-company	Dollar General Corp	0.02600544256
-company	Fidelity National Information Services I	0.02600311603
-company	Ventas Inc	0.0259507159
-company	Zoetis Inc	0.02588583526
-company	Allstate Corp/The	0.02578124595
-company	Zimmer Biomet Holdings Inc	0.02550159155
-company	Archer-Daniels-Midland Co	0.02543468749
-company	Spectra Energy Corp	0.02536231731
-company	Valero Energy Corp	0.02530916147
-company	Ross Stores Inc	0.02520507392
-company	HP Inc	0.02495774925
-company	Vertex Pharmaceuticals Inc	0.02466513101
-company	Electronic Arts Inc	0.02442210918
-company	AvalonBay Communities Inc	0.0243525591
-company	Deere & Co	0.02433306624
+company	Sherwin-Williams	0.02666036429
+company	VF	0.0264768553
+company	Cardinal Health	0.02638872371
+company	Mylan	0.02637541581
+company	Intuitive Surgical	0.02632349491
+company	General Growth Properties	0.02631209779
+company	Illumina	0.02629344256
+company	Equinix	0.02617249792
+company	Baxter International	0.0261609984
+company	Newell Brands	0.02603156685
+company	Dollar General	0.02600544256
+company	Fidelity National	0.02600311603
+company	Ventas	0.0259507159
+company	Zoetis	0.02588583526
+company	Allstate	0.02578124595
+company	Zimmer Biomet	0.02550159155
+company	Archer-Daniels-Midland	0.02543468749
+company	Spectra Energy	0.02536231731
+company	Valero Energy	0.02530916147
+company	Ross Stores	0.02520507392
+company	HP	0.02495774925
+company	Vertex Pharmaceuticals	0.02466513101
+company	Electronic Arts	0.02442210918
+company	AvalonBay Communities	0.0243525591
+company	Deere	0.02433306624
 company	Edison International	0.02428596634
-company	Hershey Co/The	0.02413944832
+company	Hershey	0.02413944832
 company	Equity Residential	0.0240938025
-company	Edwards Lifesciences Corp	0.02400766566
-company	PPL Corp	0.02399770624
-company	St Jude Medical Inc	0.02362634035
-company	Corning Inc	0.02355784909
+company	Edwards Lifesciences	0.02400766566
+company	PPL	0.02399770624
+company	St Jude Medical	0.02362634035
+company	Corning	0.02355784909
 company	Discover Financial Services	0.02349109862
-company	Weyerhaeuser Co	0.02346525082
-company	Consolidated Edison Inc	0.02342168781
-company	Newmont Mining Corp	0.02337534362
-company	Devon Energy Corp	0.02335779635
-company	CBS Corp	0.02315217101
-company	AutoZone Inc	0.0230652416
+company	Weyerhaeuser	0.02346525082
+company	Consolidated Edison	0.02342168781
+company	Newmont Mining	0.02337534362
+company	Devon Energy	0.02335779635
+company	CBS	0.02315217101
+company	AutoZone	0.0230652416
 company	Synchrony Financial	0.0228078592
-company	Southwest Airlines Co	0.02271602074
-company	Fiserv Inc	0.02263876403
-company	Dollar Tree Inc	0.02252967936
-company	Marathon Petroleum Corp	0.02226607718
-company	L Brands Inc	0.0222569984
-company	Baker Hughes Inc	0.02224146022
-company	Public Service Enterprise Group Inc	0.0222046761
-company	Cerner Corp	0.02201526682
-company	TE Connectivity Ltd	0.02192676454
-company	Boston Properties Inc	0.02187442176
-company	Xcel Energy Inc	0.02160831283
-company	Paychex Inc	0.02153818112
-company	Cummins Inc	0.02132973773
-company	Molson Coors Brewing Co	0.02126408294
-company	SunTrust Banks Inc	0.02124240896
-company	Franklin Resources Inc	0.02101114675
-company	PACCAR Inc	0.0208091136
-company	ConAgra Foods Inc	0.02046913126
-company	Apache Corp	0.0203181056
-company	Brown-Forman Corp	0.02014710579
-company	Williams Cos Inc/The	0.02011011686
-company	Moody's Corp	0.02000689152
-company	Omnicom Group Inc	0.01998984806
-company	Hormel Foods Corp	0.01991215718
-company	Analog Devices Inc	0.01978596557
-company	International Paper Co	0.01949808845
+company	Southwest Airlines	0.02271602074
+company	Fiserv	0.02263876403
+company	Dollar Tree	0.02252967936
+company	Marathon Petroleum	0.02226607718
+company	L Brands	0.0222569984
+company	Baker Hughes	0.02224146022
+company	Public Service Enterprise Group	0.0222046761
+company	Cerner	0.02201526682
+company	TE Connectivity	0.02192676454
+company	Boston Properties	0.02187442176
+company	Xcel Energy	0.02160831283
+company	Paychex	0.02153818112
+company	Cummins	0.02132973773
+company	Molson Coors Brewing	0.02126408294
+company	SunTrust Banks	0.02124240896
+company	Franklin Resources	0.02101114675
+company	PACCAR	0.0208091136
+company	ConAgra Foods	0.02046913126
+company	Apache	0.0203181056
+company	Brown-Forman	0.02014710579
+company	Williams Cos	0.02011011686
+company	Moody's	0.02000689152
+company	Omnicom Group	0.01998984806
+company	Hormel Foods	0.01991215718
+company	Analog Devices	0.01978596557
+company	International Paper	0.01949808845
 company	Vornado Realty Trust	0.01949434675
-company	WEC Energy Group Inc	0.01938064384
-company	American Airlines Group Inc	0.01931004314
-company	Progressive Corp/The	0.01926140928
-company	Concho Resources Inc	0.01905287782
-company	AmerisourceBergen Corp	0.01902116045
-company	Tyco International Plc	0.01899681997
-company	Nielsen Holdings PLC	0.01895361946
-company	Campbell Soup Co	0.01876574003
-company	Amphenol Corp	0.01863770112
-company	Marriott International Inc/MD	0.01859667354
-company	HCP Inc	0.01858644173
-company	M&T Bank Corp	0.0184611369
-company	Stanley Black & Decker Inc	0.01841514496
-company	Fortive Corp	0.01841061888
-company	Hess Corp	0.01816127488
-company	JM Smucker Co/The	0.01791451955
+company	WEC Energy Group	0.01938064384
+company	American Airlines	0.01931004314
+company	Progressive	0.01926140928
+company	Concho Resources	0.01905287782
+company	AmerisourceBergen	0.01902116045
+company	Tyco International	0.01899681997
+company	Nielsen Holdings	0.01895361946
+company	Campbell Soup	0.01876574003
+company	Amphenol	0.01863770112
+company	Marriott International	0.01859667354
+company	HCP	0.01858644173
+company	M&T Bank	0.0184611369
+company	Stanley Black & Decker	0.01841514496
+company	Fortive	0.01841061888
+company	Hess	0.01816127488
+company	JM Smucker	0.01791451955
 company	Eversource Energy	0.01778579866
-company	Dr Pepper Snapple Group Inc	0.01777659085
-company	Delphi Automotive PLC	0.01772152422
-company	Viacom Inc	0.01752224973
-company	Roper Technologies Inc	0.0175106048
-company	Realty Income Corp	0.01750685286
-company	Under Armour Inc	0.01743358771
-company	Under Armour Inc	0.01743168307
-company	Republic Services Inc	0.01739940045
-company	Ingersoll-Rand PLC	0.01739683226
-company	Level 3 Communications Inc	0.01737944474
-company	Expedia Inc	0.01731014042
-company	T Rowe Price Group Inc	0.01721472205
-company	DTE Energy Co	0.01715761357
-company	Clorox Co/The	0.01701228646
-company	Ulta Salon Cosmetics & Fragrance Inc	0.01693769523
-company	Willis Towers Watson PLC	0.0168408105
-company	Parker-Hannifin Corp	0.01672541901
-company	Micron Technology Inc	0.01630273126
-company	Nucor Corp	0.01611198054
-company	CR Bard Inc	0.01607003341
-company	Freeport-McMoRan Inc	0.01603871744
-company	Discovery Communications Inc	0.01602837197
-company	Discovery Communications Inc	0.016027264
-company	CenturyLink Inc	0.01596229325
-company	Mead Johnson Nutrition Co	0.01587881062
-company	Vulcan Materials Co	0.01576233472
-company	Ameriprise Financial Inc	0.01572239462
-company	Equifax Inc	0.01563173581
-company	Northern Trust Corp	0.01552147763
-company	Mohawk Industries Inc	0.01551808205
-company	Hartford Financial Services Group Inc/Th	0.01549273702
-company	Rockwell Automation Inc	0.01540119654
-company	United Continental Holdings Inc	0.01539177165
-company	Noble Energy Inc	0.01533928346
-company	Genuine Parts Co	0.01529792307
-company	Agilent Technologies Inc	0.01520837427
-company	Royal Caribbean Cruises Ltd	0.01520738918
-company	TransDigm Group Inc	0.0151231232
+company	Dr Pepper Snapple Group	0.01777659085
+company	Delphi Automotive	0.01772152422
+company	Viacom	0.01752224973
+company	Roper Technologies	0.0175106048
+company	Realty Income	0.01750685286
+company	Under Armour	0.01743358771
+company	Republic Services	0.01739940045
+company	Ingersoll-Rand	0.01739683226
+company	Level 3 Communications	0.01737944474
+company	Expedia	0.01731014042
+company	T Rowe Price Group	0.01721472205
+company	DTE Energy	0.01715761357
+company	Clorox	0.01701228646
+company	Ulta Salon Cosmetics & Fragrance	0.01693769523
+company	Willis Towers Watson	0.0168408105
+company	Parker-Hannifin	0.01672541901
+company	Micron Technology	0.01630273126
+company	Nucor	0.01611198054
+company	CR Bard	0.01607003341
+company	Freeport-McMoRan	0.01603871744
+company	Discovery Communications	0.01602837197
+company	CenturyLink	0.01596229325
+company	Mead Johnson Nutrition	0.01587881062
+company	Vulcan Materials	0.01576233472
+company	Ameriprise Financial	0.01572239462
+company	Equifax	0.01563173581
+company	Northern Trust	0.01552147763
+company	Mohawk Industries	0.01551808205
+company	Hartford Financial Services Group	0.01549273702
+company	Rockwell Automation	0.01540119654
+company	United Continental Holdings	0.01539177165
+company	Noble Energy	0.01533928346
+company	Genuine Parts	0.01529792307
+company	Agilent Technologies	0.01520837427
+company	Royal Caribbean Cruises	0.01520738918
+company	TransDigm Group	0.0151231232
 company	Fifth Third Bancorp	0.01500944384
-company	Digital Realty Trust Inc	0.01489181184
-company	Essex Property Trust Inc	0.0148771543
-company	Lam Research Corp	0.0145323776
+company	Digital Realty Trust	0.01489181184
+company	Essex Property Trust	0.0148771543
+company	Lam Research	0.0145323776
 company	CA Inc	0.01428405453
-company	Autodesk Inc	0.01422297498
+company	Autodesk	0.01422297498
 company	Laboratory Corp of America Holdings	0.01418798694
-company	Symantec Corp	0.01418623898
-company	Entergy Corp	0.01410378752
-company	Linear Technology Corp	0.01403028173
-company	FirstEnergy Corp	0.0140187433
-company	DENTSPLY SIRONA Inc	0.01400753664
-company	DaVita HealthCare Partners Inc	0.01398850867
-company	Loews Corp	0.01398318387
-company	Ball Corp	0.01395401626
-company	WW Grainger Inc	0.01394220237
-company	Marathon Oil Corp	0.01393748685
-company	Whirlpool Corp	0.01384100659
-company	Verisk Analytics Inc	0.01376431411
-company	American Water Works Co Inc	0.01372161229
-company	Alcoa Inc	0.01367994982
-company	Principal Financial Group Inc	0.01366644019
-company	Citrix Systems Inc	0.0136323328
-company	National Oilwell Varco Inc	0.01350787277
-company	Host Hotels & Resorts Inc	0.01340179763
-company	Starwood Hotels & Resorts Worldwide Inc	0.01335883571
-company	Xilinx Inc	0.01334583398
-company	Skyworks Solutions Inc	0.01333284454
-company	Red Hat Inc	0.01333229773
+company	Symantec	0.01418623898
+company	Entergy	0.01410378752
+company	Linear Technology	0.01403028173
+company	FirstEnergy	0.0140187433
+company	DENTSPLY SIRONA	0.01400753664
+company	DaVita HealthCare Partners	0.01398850867
+company	Loews	0.01398318387
+company	Ball	0.01395401626
+company	WW Grainger	0.01394220237
+company	Marathon Oil	0.01393748685
+company	Whirlpool	0.01384100659
+company	Verisk Analytics	0.01376431411
+company	American Water Works	0.01372161229
+company	Alcoa	0.01367994982
+company	Principal Financial Group	0.01366644019
+company	Citrix Systems	0.0136323328
+company	National Oilwell Varco	0.01350787277
+company	Host Hotels & Resorts	0.01340179763
+company	Starwood Hotels & Resorts	0.01335883571
+company	Xilinx	0.01334583398
+company	Skyworks Solutions	0.01333284454
+company	Red Hat	0.01333229773
 company	KeyCorp	0.0133216471
-company	Henry Schein Inc	0.01322481254
-company	Microchip Technology Inc	0.01314335949
-company	Perrigo Co PLC	0.01292034765
-company	McCormick & Co Inc/MD	0.0128250665
-company	Waters Corp	0.01280964813
-company	Western Digital Corp	0.01279132774
-company	Church & Dwight Co Inc	0.01277682483
-company	Fastenal Co	0.01265815347
-company	Motorola Solutions Inc	0.01262779904
-company	Kimco Realty Corp	0.01252593869
-company	Cincinnati Financial Corp	0.01244522598
-company	Martin Marietta Materials Inc	0.01240806605
-company	Cimarex Energy Co	0.01239435981
-company	Macy's Inc	0.01235431322
-company	Ameren Corp	0.0123525376
-company	SL Green Realty Corp	0.01229937766
-company	Invesco Ltd	0.01229338419
-company	Citizens Financial Group Inc	0.01222315008
-company	Acuity Brands Inc	0.01216549786
-company	CMS Energy Corp	0.01209421312
-company	Pentair PLC	0.0120716841
-company	Regions Financial Corp	0.0120310743
-company	EQT Corp	0.01202837402
-company	Cintas Corp	0.0119109161
-company	Macerich Co/The	0.01190224486
-company	DR Horton Inc	0.01189266944
-company	Cabot Oil & Gas Corp	0.01187290829
-company	Quest Diagnostics Inc	0.01184632627
-company	Alliance Data Systems Corp	0.01181760614
-company	Universal Health Services Inc	0.01181201715
-company	Centene Corp	0.01170059878
-company	Masco Corp	0.01168629453
-company	Nasdaq Inc	0.01163470541
-company	Advance Auto Parts Inc	0.01162038477
-company	L-3 Communications Holdings Inc	0.01160528486
-company	Dover Corp	0.01150305075
-company	WestRock Co	0.01148198912
-company	Chipotle Mexican Grill Inc	0.01147161805
-company	Global Payments Inc	0.01145158451
-company	Tractor Supply Co	0.01139992166
-company	Mattel Inc	0.01138689536
+company	Henry Schein	0.01322481254
+company	Microchip Technology	0.01314335949
+company	Perrigo	0.01292034765
+company	McCormick & Co	0.0128250665
+company	Waters	0.01280964813
+company	Western Digital	0.01279132774
+company	Church & Dwight	0.01277682483
+company	Fastenal	0.01265815347
+company	Motorola Solutions	0.01262779904
+company	Kimco Realty	0.01252593869
+company	Cincinnati Financial	0.01244522598
+company	Martin Marietta Materials	0.01240806605
+company	Cimarex Energy	0.01239435981
+company	Macy's	0.01235431322
+company	Ameren	0.0123525376
+company	SL Green Realty	0.01229937766
+company	Invesco	0.01229338419
+company	Citizens Financial	0.01222315008
+company	Acuity Brands	0.01216549786
+company	CMS Energy	0.01209421312
+company	Pentair	0.0120716841
+company	Regions Financial	0.0120310743
+company	EQT	0.01202837402
+company	Cintas	0.0119109161
+company	Macerich	0.01190224486
+company	DR Horton	0.01189266944
+company	Cabot Oil & Gas	0.01187290829
+company	Quest Diagnostics	0.01184632627
+company	Alliance Data Systems	0.01181760614
+company	Universal Health Services	0.01181201715
+company	Centene	0.01170059878
+company	Masco	0.01168629453
+company	Nasdaq	0.01163470541
+company	Advance Auto Parts	0.01162038477
+company	L-3 Communications Holdings	0.01160528486
+company	Dover	0.01150305075
+company	WestRock	0.01148198912
+company	Chipotle Mexican Grill	0.01147161805
+company	Global Payments	0.01145158451
+company	Tractor Supply	0.01139992166
+company	Mattel	0.01138689536
 company	Federal Realty Investment Trust	0.01132821299
-company	Harris Corp	0.01131388416
-company	AMETEK Inc	0.01128859648
-company	CarMax Inc	0.0112817193
-company	Rockwell Collins Inc	0.01101686989
-company	Coach Inc	0.01095019827
-company	Textron Inc	0.01092405555
-company	KLA-Tencor Corp	0.01085101261
-company	LKQ Corp	0.01084396954
-company	International Flavors & Fragrances Inc	0.01082210304
-company	Best Buy Co Inc	0.01079123763
-company	Lincoln National Corp	0.01073419264
+company	Harris	0.01131388416
+company	AMETEK	0.01128859648
+company	CarMax	0.0112817193
+company	Rockwell Collins	0.01101686989
+company	Coach	0.01095019827
+company	Textron	0.01092405555
+company	KLA-Tencor	0.01085101261
+company	LKQ	0.01084396954
+company	International Flavors & Fragrances	0.01082210304
+company	Best Buy	0.01079123763
+company	Lincoln National	0.01073419264
 company	Kansas City Southern	0.01062989517
-company	Hologic Inc	0.01060032717
-company	SCANA Corp	0.01037433856
-company	Garmin Ltd	0.01032023962
-company	Extra Space Storage Inc	0.01031220941
-company	Western Union Co/The	0.01029605478
-company	Gap Inc/The	0.0102475817
-company	Hanesbrands Inc	0.0102364416
-company	ONEOK Inc	0.01021411635
-company	Hasbro Inc	0.01012794266
-company	Wynn Resorts Ltd	0.01010376602
-company	CH Robinson Worldwide Inc	0.009918170112
-company	Xerox Corp	0.009839177728
-company	Iron Mountain Inc	0.009834969088
-company	CBRE Group Inc	0.009771531264
-company	CenterPoint Energy Inc	0.009761401856
-company	Lennar Corp	0.009752912896
-company	Harley-Davidson Inc	0.0097283584
-company	Mosaic Co/The	0.009721413632
-company	UDR Inc	0.009688851456
-company	Whole Foods Market Inc	0.009643835392
-company	Eastman Chemical Co	0.009633775616
-company	Fortune Brands Home & Security Inc	0.009614266368
-company	Seagate Technology PLC	0.00955400192
-company	Interpublic Group of Cos Inc/The	0.009300424704
-company	NetApp Inc	0.009289447424
-company	JB Hunt Transport Services Inc	0.009275838464
-company	Newfield Exploration Co	0.009221194752
-company	Akamai Technologies Inc	0.009181769728
-company	Expeditors International of Washington I	0.00917752832
-company	XL Group Ltd	0.009133210624
-company	Sealed Air Corp	0.009112264704
-company	Albemarle Corp	0.009109148672
-company	TripAdvisor Inc	0.009093409792
-company	Nordstrom Inc	0.009037702144
+company	Hologic	0.01060032717
+company	SCANA	0.01037433856
+company	Garmin	0.01032023962
+company	Extra Space Storage	0.01031220941
+company	Western Union	0.01029605478
+company	Gap	0.0102475817
+company	Hanesbrands	0.0102364416
+company	ONEOK	0.01021411635
+company	Hasbro	0.01012794266
+company	Wynn Resorts	0.01010376602
+company	CH Robinson Worldwide	0.009918170112
+company	Xerox	0.009839177728
+company	Iron Mountain	0.009834969088
+company	CBRE Group	0.009771531264
+company	CenterPoint Energy	0.009761401856
+company	Lennar	0.009752912896
+company	Harley-Davidson	0.0097283584
+company	Mosaic	0.009721413632
+company	UDR	0.009688851456
+company	Whole Foods Market	0.009643835392
+company	Eastman Chemical	0.009633775616
+company	Fortune Brands Home & Security	0.009614266368
+company	Seagate Technology	0.00955400192
+company	Interpublic Group	0.009300424704
+company	NetApp	0.009289447424
+company	JB Hunt Transport Services	0.009275838464
+company	Newfield Exploration	0.009221194752
+company	Akamai Technologies	0.009181769728
+company	Expeditors International of Washington	0.00917752832
+company	XL Group	0.009133210624
+company	Sealed Air	0.009112264704
+company	Albemarle	0.009109148672
+company	TripAdvisor	0.009093409792
+company	Nordstrom	0.009037702144
 company	Xylem Inc/NY	0.009036127232
-company	Snap-on Inc	0.00897088512
-company	Total System Services Inc	0.008897661952
-company	Alliant Energy Corp	0.008891022336
-company	Ralph Lauren Corp	0.008883093504
-company	Tesoro Corp	0.008864057344
-company	Juniper Networks Inc	0.008842607616
-company	Varian Medical Systems Inc	0.008746966016
-company	Mallinckrodt PLC	0.008651534336
-company	Arthur J Gallagher & Co	0.008579807232
-company	PVH Corp	0.008569166848
-company	Pinnacle West Capital Corp	0.008563792896
+company	Snap-on	0.00897088512
+company	Total System Services	0.008897661952
+company	Alliant Energy	0.008891022336
+company	Ralph Lauren	0.008883093504
+company	Tesoro	0.008864057344
+company	Juniper Networks	0.008842607616
+company	Varian Medical Systems	0.008746966016
+company	Mallinckrodt	0.008651534336
+company	Arthur J Gallagher	0.008579807232
+company	PVH	0.008569166848
+company	Pinnacle West Capital	0.008563792896
 company	Tiffany & Co	0.008516265984
-company	Scripps Networks Interactive Inc	0.008381625344
-company	Kohl's Corp	0.008368874496
-company	Alaska Air Group Inc	0.008311035392
-company	Michael Kors Holdings Ltd	0.008305212928
-company	Foot Locker Inc	0.008276854272
-company	F5 Networks Inc	0.008202092544
+company	Scripps Networks Interactive	0.008381625344
+company	Kohl's	0.008368874496
+company	Alaska Air Group	0.008311035392
+company	Michael Kors Holdings	0.008305212928
+company	Foot Locker	0.008276854272
+company	F5 Networks	0.008202092544
 company	AES Corp/VA	0.008159527936
 company	News Corp	0.008130688
-company	News Corp	0.008130688
 company	Unum Group	0.008023612928
-company	NiSource Inc	0.007991807488
-company	Comerica Inc	0.007976041472
-company	VeriSign Inc	0.007971188736
-company	Darden Restaurants Inc	0.007888482816
-company	Wyndham Worldwide Corp	0.007806617088
-company	Affiliated Managers Group Inc	0.007687002624
-company	Huntington Bancshares Inc/OH	0.007679869952
-company	Goodyear Tire & Rubber Co/The	0.007658233856
-company	Torchmark Corp	0.007466367488
-company	BorgWarner Inc	0.007319319552
-company	Fluor Corp	0.007295222272
-company	PulteGroup Inc	0.007288179712
-company	Stericycle Inc	0.007235370496
-company	Signet Jewelers Ltd	0.007174976
-company	Qorvo Inc	0.00707394816
-company	Bed Bath & Beyond Inc	0.006997910016
-company	Helmerich & Payne Inc	0.006967024128
-company	Leggett & Platt Inc	0.006952260608
-company	United Rentals Inc	0.006937686528
-company	E*TRADE Financial Corp	0.006935183872
-company	Allegion PLC	0.006896022016
-company	Apartment Investment & Management Co	0.006894124032
-company	Southwestern Energy Co	0.006876302848
-company	Avery Dennison Corp	0.006845549568
-company	Leucadia National Corp	0.006831232512
-company	Range Resources Corp	0.006659054592
-company	Jacobs Engineering Group Inc	0.006547408384
-company	FMC Technologies Inc	0.006394259456
-company	Flowserve Corp	0.006350808064
-company	FMC Corp	0.00634523136
-company	Harman International Industries Inc	0.005996457984
-company	PerkinElmer Inc	0.00599632128
+company	NiSource	0.007991807488
+company	Comerica	0.007976041472
+company	VeriSign	0.007971188736
+company	Darden Restaurants	0.007888482816
+company	Wyndham Worldwide	0.007806617088
+company	Affiliated Managers Group	0.007687002624
+company	Huntington Bancshares	0.007679869952
+company	Goodyear Tire & Rubber	0.007658233856
+company	Torchmark	0.007466367488
+company	BorgWarner	0.007319319552
+company	Fluor	0.007295222272
+company	PulteGroup	0.007288179712
+company	Stericycle	0.007235370496
+company	Signet Jewelers	0.007174976
+company	Qorvo	0.00707394816
+company	Bed Bath & Beyond	0.006997910016
+company	Helmerich & Payne	0.006967024128
+company	Leggett & Platt	0.006952260608
+company	United Rentals	0.006937686528
+company	E*TRADE	0.006935183872
+company	Allegion	0.006896022016
+company	Apartment Investment & Management	0.006894124032
+company	Southwestern Energy	0.006876302848
+company	Avery Dennison	0.006845549568
+company	Leucadia National	0.006831232512
+company	Range Resources	0.006659054592
+company	Jacobs Engineering Group	0.006547408384
+company	FMC Technologies	0.006394259456
+company	Flowserve	0.006350808064
+company	FMC	0.00634523136
+company	Harman International Industries	0.005996457984
+company	PerkinElmer	0.00599632128
 company	Zions Bancorporation	0.0059287296
-company	Frontier Communications Corp	0.005619010048
-company	Staples Inc	0.00547331328
-company	H&R Block Inc	0.005389985792
-company	CF Industries Holdings Inc	0.005344503296
-company	Assurant Inc	0.005183602688
-company	Murphy Oil Corp	0.005176305152
-company	Endo International PLC	0.005136999936
-company	Dun & Bradstreet Corp/The	0.00502633216
-company	Robert Half International Inc	0.004953122816
-company	AutoNation Inc	0.004947243008
-company	People's United Financial Inc	0.00482297856
-company	Chesapeake Energy Corp	0.00473018624
-company	Navient Corp	0.004635022336
-company	TEGNA Inc	0.00456294656
-company	Patterson Cos Inc	0.004495517696
-company	Urban Outfitters Inc	0.004307109888
-company	FLIR Systems Inc	0.004206983424
-company	Teradata Corp	0.004110860032
-company	CSRA Inc	0.004093972992
-company	NRG Energy Inc	0.003956765952
-company	Quanta Services Inc	0.003921781248
-company	First Solar Inc	0.003865106944
-company	Transocean Ltd	0.003836613376
-company	Legg Mason Inc	0.0035430208
-company	Ryder System Inc	0.003473425408
-company	Pitney Bowes Inc	0.003446403328
-company	Owens-Illinois Inc	0.003029314816
-company	Diamond Offshore Drilling Inc	0.002781800704
+company	Frontier Communications	0.005619010048
+company	Staples	0.00547331328
+company	H&R Block	0.005389985792
+company	CF Industries Holdings	0.005344503296
+company	Assurant	0.005183602688
+company	Murphy Oil	0.005176305152
+company	Endo International	0.005136999936
+company	Dun & Bradstreet	0.00502633216
+company	Robert Half International	0.004953122816
+company	AutoNation	0.004947243008
+company	People's United Financial	0.00482297856
+company	Chesapeake Energy	0.00473018624
+company	Navient	0.004635022336
+company	TEGNA	0.00456294656
+company	Patterson	0.004495517696
+company	Urban Outfitters	0.004307109888
+company	FLIR Systems	0.004206983424
+company	Teradata	0.004110860032
+company	CSRA	0.004093972992
+company	NRG Energy	0.003956765952
+company	Quanta Services	0.003921781248
+company	First Solar	0.003865106944
+company	Transocean	0.003836613376
+company	Legg Mason	0.0035430208
+company	Ryder System	0.003473425408
+company	Pitney Bowes	0.003446403328
+company	Owens-Illinois	0.003029314816
+company	Diamond Offshore Drilling	0.002781800704

@@ -342,6 +342,38 @@ $share-button-size: 38px;
   text-align: left;
 }
 
+@media (max-width: 500px) {
+  
+  #bond-interactive {
+    .bar-graphic {
+      width: 90%;
+      margin-left: 0;
+      margin-right: 0;
+
+      .pf-liability:before {
+        left: -25%;
+      }
+
+      .pf-liability:after {
+        width: 300%;
+      }
+
+      .pf-interest-16:after {
+        left: 93%;
+      }
+
+      .pf-interest-1point5:after {
+        left: 93%;
+      }
+
+      .pf-bar:last-of-type:after {
+          width: 15%;
+          bottom: -2.5em;
+      }
+    }
+  }
+}
+
 
 
 

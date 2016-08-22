@@ -319,6 +319,16 @@ $share-button-size: 38px;
       font-size: 1.5em;
     }
 
+    textarea {
+      width: 400px;
+      color: #af516c;
+      font-weight: 600;
+      font-size: 1.5em;
+      line-height: 1.2em;
+      margin-top: 0.2em;
+      vertical-align: top;
+    }
+
     #error {
       color: red;
       display: block;
@@ -372,6 +382,18 @@ $share-button-size: 38px;
       .pf-bar:last-of-type:after {
           width: 15%;
           bottom: -2.5em;
+      }
+    }
+
+    #compare-pds {
+      textarea {
+        width: 90%;
+        color: #af516c;
+        font-weight: 600;
+        font-size: 1.5em;
+        line-height: 1.2em;
+        margin-top: 0.2em;
+        vertical-align: top;
       }
     }
   }

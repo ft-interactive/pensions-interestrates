@@ -1,11 +1,11 @@
 export default _ => ({ // eslint-disable-line
 
   // link file UUID
-  id: '',
+  id: '3e17efac-68bd-11e6-ae5b-a7cc5dd5a28c',
 
   // canonical URL of the published page
   // https://ig.ft.com/sites/pensions-interestrates get filled in by the ./configure script
-  url: 'https://ig.ft.com/sites/pensions-interestrates',
+  url: 'https://ig.ft.com/sites/pensions-interestrates-explainer',
 
   // To set an exact publish date do this:
   //       new Date('2016-05-17T17:11:22Z')
@@ -37,6 +37,7 @@ export default _ => ({ // eslint-disable-line
 
   // meta data
   description: 'Bond mathematics and the scale of pension deficits explained',
+  image: 'https://ig.ft.com/sites/pensions-interestrates-explainer/images/social.jpg',
 
   /*
   TODO: Select Twitter card type -
@@ -49,9 +50,8 @@ export default _ => ({ // eslint-disable-line
 
   // optional social meta data
   // twitterCreator: '@individual's_account',
-  // tweetText:  '',
-  // socialHeadline: '',
-  // socialSummary:  '',
+  socialHeadline:  'Pensions\' painful arithmetic: Bond mathematics and the scale of pension deficits explained',
+  socialSummary:  'Bond mathematics and the scale of pension deficits explained',
 
   onwardjourney: {
 

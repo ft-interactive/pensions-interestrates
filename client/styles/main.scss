@@ -283,10 +283,28 @@ $share-button-size: 38px;
     #instructions {
       text-align: left; 
       padding: 1em;
+      font-family: MetricWeb, sans-serif;
+      color: #333;
+    }
+
+    .key {
+      font-family: MetricWeb, sans-serif;
+      // padding: 0.10em 0.5em 0.20em 0.5em;
+      // border-radius: 3px;
+      // font-size: 1.2em;
+      font-weight: 600;
+    }
+
+    #key-country {
+      color: #d7706c;
+    }
+
+    #key-company {
+      color: #3d7ab3;
     }
 
     .interactive-sentence {
-      margin: 2em 0 1em 0;
+      margin: 1em 0;
       font-family: MetricWeb, sans-serif;
       font-size: 1.2em;
       line-height: 3em;
@@ -307,17 +325,40 @@ $share-button-size: 38px;
     }
 
     #interactive-result {
-      color: #af516c;
-      font-weight: 600;
-      font-size: 1.5em;
-    }
-
-    input {
-      width: 400px;
-      color: #af516c;
+      color: #333;
       font-weight: 600;
       font-size: 1.5em;
       line-height: 1em;
+
+      .multiplier {
+        font-size: 3.5em;
+        margin-top: 0.4em;
+        margin-bottom: -0.4em;
+      }
+    }
+
+    #thanhack {
+      display: block;
+      margin-top: -1.3em;
+    }
+
+    textarea {
+      width: 400px;
+      color: #af516c;
+      font-weight: 600;
+      font-size: 2em;
+      line-height: 1.2em;
+      margin-top: -1.7em;
+      vertical-align: top;
+      text-align: center;
+    }
+
+    textarea.item-country {
+      color: #d7706c;
+    }
+
+    textarea.item-company {
+      color: #3d7ab3;
     }
 
     #error {
@@ -377,8 +418,14 @@ $share-button-size: 38px;
     }
 
     #compare-pds {
-      input {
+      textarea {
         width: 90%;
+        color: #af516c;
+        font-weight: 600;
+        font-size: 1.5em;
+        line-height: 1.2em;
+        // margin-top: 0.2em;
+        vertical-align: top;
       }
     }
   }

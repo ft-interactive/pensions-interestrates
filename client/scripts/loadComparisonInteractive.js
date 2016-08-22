@@ -13,78 +13,90 @@ function htmlEncode(s) {
   return s;
 }
 
-function changeTweetText() {
-  const maxChars = 140;
-
-  const usUk = $('#usuk .interactive-option[aria-pressed=true]').text();
-  const publicPrivate = $('#publicprivate .interactive-option[aria-pressed=true]').text();
-  const companyCountry = $('#interactive-compare').val();
-  const companyCountryStripped = companyCountry.replace(/ \(.*\)/, '');
-  const result = $('#interactive-result').text();
-  let multiplier;
-  if (result.indexOf('smaller') >= 0) {
-    multiplier = Math.round(100 / (100 - (result.replace(/,/g, '').match(/\d+/)[0])));
-  } else {
-    multiplier = result.replace(/,/g, '').match(/\d+/)[0];
-  }
-
-  let unit = '\'s GDP';
-  if (companyCountry.indexOf('market cap') >= 0) {
-    unit = ' (market cap)';
-  }
-
-  let deficitVal;
-  if (usUk === 'UK') {
-    if (publicPrivate === 'public') {
-      deficitVal = '$61.72bn';
-    } else {
-      deficitVal = '$196bn';
-    }
-  } else {
-    if (publicPrivate === 'public') {
-      deficitVal = '$3.4tn';
-    } else {
-      deficitVal = '$638bn';
-    }
-  }
-  let availableSpace;
-
-  let sentence = `The ${usUk} ${publicPrivate} pension deficit (${deficitVal}) is ${result} than ${companyCountryStripped}${unit}`;
-
-  sentence = sentence.replace(/%/g, '%25');
-
-  if (multiplier <= 7 && multiplier >= 2) { // if too long, will overflow into two lines.
-    let barChart = '%0D%0A';
-    for (let i = 0; i < multiplier; i++) {
-      barChart += '▇';
-    }
-    if (result.indexOf('bigger') > 0) {
-      barChart += `%20${usUk} deficit`;
-    } else {
-      barChart += `%20${companyCountryStripped}`;
-    }
-    barChart += '%0D%0A▇';
-    if (result.indexOf('bigger') > 0) {
-      barChart += `%20${companyCountryStripped}`;
-    } else {
-      barChart += `%20${usUk} deficit`;
-    }
-    barChart += '%0D%0A';
-
-    availableSpace = maxChars - sentence.length - barChart.length - 23 + 20; // minus 23 for link, add 20 because %0D%0A doesn't count
-    if (availableSpace >= 0) {
-      sentence += barChart;
-    }
-
-    sentence = sentence.replace(/&/g, '%26');
-  }
-
-  document.getElementById('tweetable').innerText = sentence;
-
-  console.log(sentence, availableSpace, multiplier);
-}
-
 export function loadComparisonInteractive(data) {
+  function changeTweetText() {
+    const maxChars = 140;
+
+    const usUk = $('#usuk .interactive-option[aria-pressed=true]').text();
+    const publicPrivate = $('#publicprivate .interactive-option[aria-pressed=true]').text();
+    const companyCountry = $('#interactive-compare').val();
+    const result = $('#interactive-result').text();
+    let multiplier;
+    if (result.indexOf('smaller') >= 0) {
+      multiplier = Math.round(100 / (100 - (result.replace(/,/g, '').match(/\d+/)[0])));
+    } else {
+      multiplier = result.replace(/,/g, '').match(/\d+/)[0];
+    }
+
+    let unit = '\'s GDP';
+    const category = _.findWhere(data, { name: companyCountry }).category;
+    if (category === 'company') {
+      unit = ' (market cap)';
+    }
+
+    let deficitVal;
+    if (usUk === 'UK') {
+      if (publicPrivate === 'public') {
+        deficitVal = '$61.72bn';
+      } else {
+        deficitVal = '$196bn';
+      }
+    } else {
+      if (publicPrivate === 'public') {
+        deficitVal = '$3.4tn';
+      } else {
+        deficitVal = '$638bn';
+      }
+    }
+    let availableSpace;
+
+    let sentence = `The ${usUk} ${publicPrivate} pension deficit (${deficitVal}) is ${result} than ${companyCountry}${unit}`;
+
+    sentence = sentence.replace(/%/g, '%25');
+
+    if (multiplier <= 7 && multiplier >= 2) { // if too long, will overflow into two lines.
+      let barChart = '%0D%0A';
+      for (let i = 0; i < multiplier; i++) {
+        barChart += '▇';
+      }
+      if (result.indexOf('bigger') > 0) {
+        barChart += `%20${usUk} deficit`;
+      } else {
+        barChart += `%20${companyCountry}`;
+      }
+      barChart += '%0D%0A▇';
+      if (result.indexOf('bigger') > 0) {
+        barChart += `%20${companyCountry}`;
+      } else {
+        barChart += `%20${usUk} deficit`;
+      }
+      barChart += '%0D%0A';
+
+      availableSpace = maxChars - sentence.length - barChart.length - 23 + 20; // minus 23 for link, add 20 because %0D%0A doesn't count
+      if (availableSpace >= 0) {
+        sentence += barChart;
+      }
+
+      sentence = sentence.replace(/&/g, '%26');
+    }
+
+    document.getElementById('tweetable').innerText = sentence;
+
+    console.log(sentence, availableSpace, multiplier);
+  }
+
+
+  function colorCode() {
+    const companyCountry = $('#interactive-compare').val();
+    const category = _.findWhere(data, { name: companyCountry }).category;
+
+    $('#interactive-compare').removeClass('item-country');
+    $('#interactive-compare').removeClass('item-company');
+
+    $('#interactive-compare').addClass(`item-${category}`);
+    return true;
+  }
+
   // Pension deficit notes:
   // US public pension deficit: 3.41 trillion USD (http://www.ft.com/cms/s/0/c9966bea-fcd8-11e5-b5f5-070dca6d0a0d.html)
   // US corporate pension deficits: 0.638 trillion USD (http://www.mercer.com/newsroom/june-2016-pension-funding.html)
@@ -107,8 +119,7 @@ export function loadComparisonInteractive(data) {
       }
     }
 
-    const originalName = document.getElementById('interactive-compare').value;
-    const name = originalName.replace(/ \(.*\)/, '');
+    const name = document.getElementById('interactive-compare').value;
     const value = _.findWhere(data, { name }).value;
 
     let multiplyFactor = pensionDeficit / value;
@@ -121,30 +132,26 @@ export function loadComparisonInteractive(data) {
       }
       multiplyFactor = numberWithCommas(multiplyFactor);
       const percentNum = 100 - Math.round(100 / multiplyFactor);
-      interactiveText = `${percentNum}% smaller`;
+      interactiveText = `<div class='multiplier'>${percentNum}%</div><br />smaller`;
     } else {
       if (Math.round(1 / multiplyFactor) !== 1) {
         multiplyFactor = numberWithCommas(Math.round(multiplyFactor));
       } else {
         multiplyFactor = Math.round(multiplyFactor * 100) / 100;
       }
-      interactiveText = `${multiplyFactor} times bigger`;
+      interactiveText = `<div class='multiplier'>${multiplyFactor}</div><br />times bigger`;
     }
 
-    document.getElementById('interactive-compare').value = originalName;
+    document.getElementById('interactive-compare').value = name;
     document.getElementById('interactive-result').innerHTML = interactiveText;
 
     changeTweetText();
+    colorCode();
   }
 
   document.getElementById('random').addEventListener('click', () => {
     const randomId = Math.floor(Math.random() * data.length);
-    let unit = '(GDP)';
-    if (data[randomId].category === 'company') {
-      unit = '(market cap)';
-    }
-
-    const name = `${data[randomId].name} ${unit}`;
+    const name = `${data[randomId].name}`;
 
     document.getElementById('interactive-compare').value = name;
     getResult();
@@ -159,48 +166,20 @@ export function loadComparisonInteractive(data) {
     getResult();
   });
 
-  let formattedAutocompleteData = [];
-  formattedAutocompleteData = _.map(data, (v) => {
-    let unit = 'market cap';
-    if (v.category === 'country') {
-      unit = 'GDP';
-    }
-    return {
-      value: v.value,
-      label: v.name,
-      desc: `${v.name} (${unit})`,
-    };
-  });
-
+  const list = _.pluck(data, 'name');
   $('#interactive-compare').autocomplete({
-    source: formattedAutocompleteData,
-    focus: (event, ui) => {
-      $('#interactive-compare').val(ui.item.desc);
-      return false;
-    },
+    source: list,
     minLength: 2,
     delay: 500,
     select: function select(e, ui) {
-      $('#project').val(ui.item.desc);
-      $('#project-id').val(ui.item.value);
-      $('#project-description').html(ui.item.desc);
-
       if (ui.item) {
-        $(e.target).val(ui.item.desc);
+        $(e.target).val(ui.item.value);
       }
       const name = $(this).val();
       getResult(name);
-
-      return false;
     },
   });
 
-  $('#interactive-compare').autocomplete('instance')._renderItem = function (ul, item) {
-    return $('<li>')
-      .append(`<div>${item.desc}</div>`)
-      .appendTo(ul);
-  };
-
-  document.getElementById('interactive-compare').value = 'Apple (market cap)';
+  document.getElementById('interactive-compare').value = 'Apple';
   getResult(); // start page with this
 }

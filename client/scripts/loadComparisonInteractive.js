@@ -132,14 +132,14 @@ export function loadComparisonInteractive(data) {
       }
       multiplyFactor = numberWithCommas(multiplyFactor);
       const percentNum = 100 - Math.round(100 / multiplyFactor);
-      interactiveText = `<div class='multiplier'>${percentNum}%</div><br />smaller`;
+      interactiveText = `<div class='multiplier'>${percentNum}% </div><br />smaller`;
     } else {
       if (Math.round(1 / multiplyFactor) !== 1) {
         multiplyFactor = numberWithCommas(Math.round(multiplyFactor));
       } else {
         multiplyFactor = Math.round(multiplyFactor * 100) / 100;
       }
-      interactiveText = `<div class='multiplier'>${multiplyFactor}</div><br />times bigger`;
+      interactiveText = `<div class='multiplier'>${multiplyFactor} </div><br />times bigger`;
     }
 
     document.getElementById('interactive-compare').value = name;

@@ -15,6 +15,7 @@ const config = {
     yAxisLabel: '%',
     yScale: [-1, 16],
     xDomain: ['01-Jan-1980', '31-Dec-2016'],
+    labelBreakpoint: 400,
     columns: [
       {
         columnName: 'GUKG10 Index',
@@ -28,6 +29,7 @@ const config = {
         color: '#3d7ab3',
         label: 'German bund yield',
         labelPlacement: { x: '01-Jan-1986', y: 4.2 },
+        mobileLabelPlacement: { x: '01-Jan-1978', y: 4.2 },
         strokeWeight: 1,
       },
       {
@@ -47,12 +49,14 @@ const config = {
     yAxisLabel: 'years',
     yScale: [68, 80],
     xDomain: [1960, 2013],
+    labelBreakpoint: 600,
     columns: [
       {
         columnName: 'United Kingdom',
         color: '#76acb8',
         label: 'UK',
-        labelPlacement: { x: 2009, y: 81 },
+        labelPlacement: { x: 2008, y: 80.5 },
+        mobileLabelPlacement: { x: 2004, y: 80 },
         strokeWeight: 1,
       },
       {
@@ -60,6 +64,7 @@ const config = {
         color: '#3d7ab3',
         label: 'Germany',
         labelPlacement: { x: 2008, y: 79.2 },
+        mobileLabelPlacement: { x: 1986, y: 78 },
         strokeWeight: 1,
       },
       {
@@ -67,6 +72,7 @@ const config = {
         color: '#af516c',
         label: 'US',
         labelPlacement: { x: 2011, y: 77.8 },
+        mobileLabelPlacement: { x: 2000, y: 76 },
         strokeWeight: 2,
       },
     ],
@@ -77,16 +83,17 @@ const config = {
     type: 'area',
     head: 'Assets are not growing as fast as liabilities',
     areaLabel: 'Liability gap',
-    areaLabelPlacement: { x: '01-Jan-2014', y: 250 },
+    areaLabelPlacement: { x: '01-Jan-2016', y: 250 },
     yAxisLabel: 'Cumulative returns rebased',
     yScale: [0, 450],
     xDomain: ['01-Dec-1999', '01-Jul-2016'],
+    labelBreakpoint: 400,
     columns: [
       {
         columnName: 'Liabilities',
         color: '#af516c',
         label: 'Liabilities',
-        labelPlacement: { x: '01-Jan-2001', y: 170 },
+        labelPlacement: { x: '01-Jan-2001', y: 180 },
         strokeWeight: 2,
       },
       {

@@ -14,4 +14,4 @@ dependencies:
 test:
   post:
     - npm run preflight
-    - mv -fv dist $CIRCLE_ARTIFACTS
+    - mv -fv dist/* $CIRCLE_ARTIFACTS

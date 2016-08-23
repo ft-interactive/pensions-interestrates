@@ -37,7 +37,7 @@ export function loadComparisonInteractive(data) {
     let deficitVal;
     if (usUk === 'UK') {
       if (publicPrivate === 'public') {
-        deficitVal = '$61.72bn';
+        deficitVal = '$61.7bn';
       } else {
         deficitVal = '$196bn';
       }

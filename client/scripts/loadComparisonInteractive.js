@@ -145,7 +145,7 @@ export function loadComparisonInteractive(data) {
       //   percentNum = 100 - Math.round(1000 / multiplyFactor) / 10;
       // }
       const percentNum = Math.round(multiplyFactor * 100);
-      interactiveText = `<div class='multiplier'>${percentNum}% </div><br />the size of`;
+      interactiveText = `<div class='multiplier'>${percentNum}% </div><br />the size`;
       thanOf = ' of ';
     } else {
       if (Math.round(1 / multiplyFactor) !== 1) {

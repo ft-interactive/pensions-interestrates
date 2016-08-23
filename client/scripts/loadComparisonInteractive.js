@@ -125,16 +125,17 @@ export function loadComparisonInteractive(data) {
     let multiplyFactor = pensionDeficit / value;
     let interactiveText;
 
-    console.log(multiplyFactor)
-
     if (multiplyFactor < 1) {
       if (Math.round(1 / multiplyFactor) !== 1) {
         multiplyFactor = Math.round(1 / multiplyFactor);
       } else {
-        multiplyFactor = Math.round(100 / multiplyFactor) / 100;
+        multiplyFactor = Math.round(1000 / multiplyFactor) / 1000;
       }
       multiplyFactor = numberWithCommas(multiplyFactor);
-      const percentNum = 100 - Math.round(100 / multiplyFactor);
+      let percentNum = 100 - Math.round(100 / multiplyFactor);
+      if (percentNum === 100) {
+        percentNum = 100 - Math.round(1000 / multiplyFactor) / 10;
+      }
       interactiveText = `<div class='multiplier'>${percentNum}% </div><br />smaller`;
     } else {
       if (Math.round(1 / multiplyFactor) !== 1) {

@@ -11,9 +11,9 @@ export default _ => ({ // eslint-disable-line
   //       new Date('2016-05-17T17:11:22Z')
   publishedDate: new Date(),
 
-  headline: 'Pensions\' painful arithmetic',
+  headline: 'Pensions and bonds: the problem explained',
 
-  summary: 'Bond mathematics and the scale of pension deficits explained',
+  summary: 'Bond mathematics and the scale of pension deficits',
 
   topic: {
     name: 'Capital Markets',
@@ -33,10 +33,10 @@ export default _ => ({ // eslint-disable-line
   ],
 
   // Appears in the HTML <title>
-  title: 'Pensions\' painful arithmetic',
+  title: 'Pensions and bonds: the problem explained',
 
   // meta data
-  description: 'Bond mathematics and the scale of pension deficits explained',
+  description: 'Bond mathematics and the scale of pension deficits',
   image: 'https://ig.ft.com/sites/pensions-interestrates-explainer/images/social.jpg',
 
   /*

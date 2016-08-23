@@ -69,6 +69,10 @@ $share-button-size: 38px;
 
 #bond-interactive {
 
+  .ft-chart {
+    height: 400px;
+  }
+
   img {
     width: 100%;
     margin: 1em 0;
@@ -352,7 +356,7 @@ $share-button-size: 38px;
     #interactive-compare-text {
       width: 100%;
       word-wrap: break-word;
-      color: #af516c;
+      color: #3d7ab3;
       font-weight: 600;
       font-size: 2em;
       line-height: 1.2em;
@@ -386,6 +390,10 @@ $share-button-size: 38px;
 
     button {
       margin-bottom: 3em;
+    }
+
+    input {
+      width: 200px;
     }
 
     .sourceline {
@@ -435,8 +443,6 @@ $share-button-size: 38px;
 
     #compare-pds {
       #interactive-compare-text {
-        width: 90%;
-        color: #af516c;
         font-weight: 600;
         font-size: 1.5em;
         line-height: 1.2em;

@@ -1,11 +1,11 @@
 <div id="bond-interactive">
   <div class="step">
     {% markdown %}
-    Bond yields have fallen globally since the UK Brexit referendum on June 23. This has made even more acute [a problem for financing pensions](http://www.ft.com/cms/s/0/8a54a0c6-648b-11e6-a08a-c7ac04ef00aa.html), which has been growing for many years. The problem is greatest for "defined benefit" plans, which have made guarantees to their members about the retirement income they can expect.
+    Bond yields have fallen globally since the UK vote on leaving the EU on June 23. This has made even more acute [a problem for financing pensions](http://www.ft.com/cms/s/0/8a54a0c6-648b-11e6-a08a-c7ac04ef00aa.html), which has been growing for many years. The problem is greatest for "defined benefit" plans, which have made guarantees to their members about the retirement income they can expect.
 
     For more than three decades, bond yields — which follow interest rates — around the world have decreased. The ten-year US Treasury yield — which was as high as 16 per cent in 1981 — is now just about 1.5 per cent.
     {% endmarkdown %}
-    <div id="interest-rates-chart"></div>
+    <div class="ft-chart" id="interest-rates-chart"></div>
     <div class="sourceline">Source: Thomson Reuters Datastream</div>
   </div>
 
@@ -55,7 +55,7 @@
     {% markdown %}
     Add to that the fact that people are living longer. That means that pension funds must be prepared to pay out for longer and hence their liabilities grow.
     {% endmarkdown %}
-    <div id="life-expectancies-chart"></div>
+    <div class="ft-chart" id="life-expectancies-chart"></div>
     <div class="sourceline">Source: UN</div>
   </div>
 
@@ -63,7 +63,7 @@
     {% markdown %}
     A further problem for pension funds is that their assets have not grown as fast in recent years, thanks to problems in the stock market. As their liabilities have grown much faster than assets, so their deficits — the gap between the money they have and the money it will take to pay their pensioners — have deepened.
     {% endmarkdown %}
-    <div id="assets-liabilities-chart"></div>
+    <div class="ft-chart" id="assets-liabilities-chart"></div>
     <div class="sourceline">Average results US public and private DB pension funds. <br />Source: Ryan ALM, Inc</div>
   </div>
 
@@ -75,8 +75,9 @@
 
   <div class="step">
     <div id="compare-pds">
+      <div id="interactive"></div>
       <h2 class="o-typography-heading2">Interactive: How big is the pension deficit?</h2>
-      <p id="instructions">The scale of pension shortfalls can be difficult to conceive, and requires many complicated assumptions.* This tool should help put the problem in rough context. Use the text box below to search for a <span class="key" id="key-country">country</span> (GDP — how much it produces in a year) or <span class="key" id="key-company">company</span> (market cap — how much it is worth on the stock market) or use the random generator, and compare them with different pension deficits.</p>
+      <p id="instructions">The scale of pension shortfalls is difficult to conceive, and requires many complicated assumptions.* This tool helps put the problem in rough context. Use the text box below to search for a <span class="key" id="key-country">country</span> (GDP — how much it produces in a year) or <span class="key" id="key-company">company</span> (market cap — how much it is worth on the stock market) or use the random generator, and compare them with different pension deficits.</p>
       <div class="interactive-sentence">
         The <span id="publicprivate"><span class="interactive-option" id="interactive-option--public" role="button" aria-pressed="true">public</span> <span class="interactive-option" id="interactive-option--private" role="button" aria-pressed="false">private</span></span> pension deficit in the <span id="usuk"><span class="interactive-option" id="interactive-option--us" role="button" aria-pressed="true">US</span> <span class="interactive-option" id="interactive-option--uk" role="button" aria-pressed="false">UK</span></span> is <br /><span id="interactive-result"></span><span id="thanhack"> than </span><br /><div id="interactive-compare-text">Apple</div><div id="interactive-unit">(market cap)</div>
         <span id="error">The company or country you searched for does not exist.</span>
@@ -85,7 +86,7 @@
       
       <button class="o-buttons o-buttons--standout" id="random">Show me another</button>
       <br />
-      Search for a company or country: <input type="text" placeholder="Type company or country here" id="interactive-compare" />
+      <label for="interactive-compare">Search for a company or country: </label><input type="text" placeholder="Type company or country here" id="interactive-compare" />
       
 
       <div class="sourceline">* Pension deficits are based on latest numbers as of publication, and market caps are as of August 18. UK public pension deficit includes only Local Government Pension Scheme members. UK private pension deficit includes defined benefit pension schemes for the UK's 350 largest listed companies. US public pension deficit includes 564 state and local services systems in the US. It uses Hoover's estimate for pricing liabilities. It does not include the pay-as-you-go social security fund. US private pension deficit includes pension plans sponsored by the largest 1,500 companies by market cap (S&P).<br /><br />Sources: <a href="http://data.worldbank.org/indicator/NY.GDP.MKTP.CD" target="_blank">World Bank</a>, Bloomberg, <a href="http://www.lgpsboard.org/index.php/funding">Local Government Pension Scheme</a>, <a href="http://www.mercer.com/newsroom/june-2016-pension-funding.html">Mercer</a>, <a href="http://www.hoover.org/research/hidden-debt-hidden-deficits-how-pension-promises-are-consuming-state-and-local-budgets">Hoover Institution</a></div>
@@ -95,6 +96,8 @@
   <div class="step">
     {% markdown %}
     Although defined benefit plans are steadily being phased out, they still account for more than half of retirement funds in the developed world. Millions of relatively low-paid public sector workers, typically including teachers, police officers and firefighters — rely on defined benefit pensions for the bulk of their retirement income. So do some of some the largest and longest established corporations on both sides of the Atlantic.
+
+    Pensioners' payouts are guaranteed by law. Companies can only escape them in bankruptcy. But somehow these gaps must be filled. Either workers must be persuaded to accept lower benefits than they have been promised, or funds to fill the gap must come from other sources, meaning less money for companies, for investment, or for public services.
     {% endmarkdown %}
   </div>
 

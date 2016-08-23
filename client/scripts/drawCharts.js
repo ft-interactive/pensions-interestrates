@@ -132,18 +132,18 @@ function percentEncode(string) {
   return string.replace(/#/g, '%23').replace(/,/g, '%2c').replace(/ /g, '%20');
 }
 
-document.getElementById('tweet').addEventListener('click', () => {
-  const baseURL = `https://twitter.com/intent/tweet?url=http://${window.location.hostname + window.location.pathname}`;
-  const text = document.getElementById('tweetable').innerText;
+// document.getElementById('tweet').addEventListener('click', () => {
+//   const baseURL = `https://twitter.com/intent/tweet?url=http://${window.location.hostname + window.location.pathname}`;
+//   const text = document.getElementById('tweetable').innerText;
 
-  const tweetText = `&text=${text}`;
-  const related = '&related=ft';
-  const counterURL = `&counturl=${window.location.hostname + window.location.pathname}`;
+//   const tweetText = `&text=${text}`;
+//   const related = '&related=ft';
+//   const counterURL = `&counturl=${window.location.hostname + window.location.pathname}`;
 
-  const twitterURL = percentEncode(baseURL + tweetText + related + counterURL);
+//   const twitterURL = percentEncode(baseURL + tweetText + related + counterURL);
 
-  const settings = 'width=500,height=400,scrollbars=no,location=0,statusbars=0,' +
-                    'menubars=0,toolbars=0,resizable=0';
+//   const settings = 'width=500,height=400,scrollbars=no,location=0,statusbars=0,' +
+//                     'menubars=0,toolbars=0,resizable=0';
 
-  window.open(twitterURL, 'Tweet', settings);
-});
+//   window.open(twitterURL, 'Tweet', settings);
+// });

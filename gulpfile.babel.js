@@ -296,6 +296,7 @@ gulp.task('test:preflight', ['test:install-selenium'], () => {
     return process.exit();
   }
 
+  console.log('What is the port', process.env.PORT);
   distServer().listen(process.env.PORT || '3000');
 
   return nightwatch.runner({ // eslint-disable-line consistent-return

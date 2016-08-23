@@ -12,5 +12,5 @@ dependencies:
     - npm install
 
 test:
-  pre:
+  post:
     - npm run preflight

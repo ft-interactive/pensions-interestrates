@@ -90,10 +90,10 @@ export function loadComparisonInteractive(data) {
     const companyCountry = $('#interactive-compare').val();
     const category = _.findWhere(data, { name: companyCountry }).category;
 
-    $('#interactive-compare').removeClass('item-country');
-    $('#interactive-compare').removeClass('item-company');
+    $('#interactive-compare-text').removeClass('item-country');
+    $('#interactive-compare-text').removeClass('item-company');
 
-    $('#interactive-compare').addClass(`item-${category}`);
+    $('#interactive-compare-text').addClass(`item-${category}`);
     return true;
   }
 
@@ -124,6 +124,9 @@ export function loadComparisonInteractive(data) {
 
     let multiplyFactor = pensionDeficit / value;
     let interactiveText;
+
+    console.log(multiplyFactor)
+
     if (multiplyFactor < 1) {
       if (Math.round(1 / multiplyFactor) !== 1) {
         multiplyFactor = Math.round(1 / multiplyFactor);
@@ -142,7 +145,7 @@ export function loadComparisonInteractive(data) {
       interactiveText = `<div class='multiplier'>${multiplyFactor} </div><br />times bigger`;
     }
 
-    document.getElementById('interactive-compare').value = name;
+    document.getElementById('interactive-compare-text').innerHTML = name;
     document.getElementById('interactive-result').innerHTML = interactiveText;
 
     changeTweetText();

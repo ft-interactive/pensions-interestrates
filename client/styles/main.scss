@@ -349,8 +349,9 @@ $share-button-size: 38px;
       margin-top: -1.3em;
     }
 
-    textarea {
-      width: 400px;
+    #interactive-compare-text {
+      width: 100%;
+      word-wrap: break-word;
       color: #af516c;
       font-weight: 600;
       font-size: 2em;
@@ -360,11 +361,11 @@ $share-button-size: 38px;
       text-align: center;
     }
 
-    textarea.item-country {
+    #interactive-compare-text.item-country {
       color: #d7706c;
     }
 
-    textarea.item-company {
+    #interactive-compare-text.item-company {
       color: #3d7ab3;
     }
 
@@ -377,6 +378,10 @@ $share-button-size: 38px;
 
     #tweetable {
       display: none;
+    }
+
+    button {
+      margin-bottom: 3em;
     }
 
     .sourceline {
@@ -425,7 +430,7 @@ $share-button-size: 38px;
     }
 
     #compare-pds {
-      textarea {
+      #interactive-compare-text {
         width: 90%;
         color: #af516c;
         font-weight: 600;

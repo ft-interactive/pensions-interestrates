@@ -48,7 +48,7 @@ const config = {
     type: 'line',
     head: 'Lives and retirements are growing longer',
     desc: 'US life expectancies at birth have increased from under 70 in 1960 to nearly 79 in 2013. Life expectancies in the UK and Germany are even longer.',
-    yAxisLabel: 'years',
+    yAxisLabel: 'life expectancies at birth (years)',
     yScale: [68, 81],
     xDomain: [1960, 2013],
     labelBreakpoint: 600,

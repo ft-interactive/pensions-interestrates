@@ -82,7 +82,7 @@ export function loadComparisonInteractive(data) {
 
     document.getElementById('tweetable').innerText = sentence;
 
-    console.log(sentence, availableSpace, multiplier);
+    // console.log(sentence, availableSpace, multiplier);
   }
 
 

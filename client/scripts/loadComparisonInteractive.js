@@ -128,21 +128,25 @@ export function loadComparisonInteractive(data) {
       unit = '(GDP)';
     }
 
+    let thanOf = ' than ';
+
     let multiplyFactor = pensionDeficit / value;
     let interactiveText;
 
     if (multiplyFactor < 1) {
-      if (Math.round(1 / multiplyFactor) !== 1) {
-        multiplyFactor = Math.round(1 / multiplyFactor);
-      } else {
-        multiplyFactor = Math.round(1000 / multiplyFactor) / 1000;
-      }
-      multiplyFactor = numberWithCommas(multiplyFactor);
-      let percentNum = 100 - Math.round(100 / multiplyFactor);
-      if (percentNum === 100) {
-        percentNum = 100 - Math.round(1000 / multiplyFactor) / 10;
-      }
-      interactiveText = `<div class='multiplier'>${percentNum}% </div><br />smaller`;
+      // if (Math.round(1 / multiplyFactor) !== 1) {
+      //   multiplyFactor = Math.round(1 / multiplyFactor);
+      // } else {
+      //   multiplyFactor = Math.round(1000 / multiplyFactor) / 1000;
+      // }
+      // multiplyFactor = numberWithCommas(multiplyFactor);
+      // let percentNum = 100 - Math.round(100 / multiplyFactor);
+      // if (percentNum === 100) {
+      //   percentNum = 100 - Math.round(1000 / multiplyFactor) / 10;
+      // }
+      const percentNum = Math.round(multiplyFactor * 100);
+      interactiveText = `<div class='multiplier'>${percentNum}% </div><br />the size of`;
+      thanOf = ' of ';
     } else {
       if (Math.round(1 / multiplyFactor) !== 1) {
         multiplyFactor = numberWithCommas(Math.round(multiplyFactor));
@@ -153,6 +157,7 @@ export function loadComparisonInteractive(data) {
     }
 
     document.getElementById('interactive-compare-text').innerHTML = name;
+    document.getElementById('thanhack').innerHTML = thanOf;
     document.getElementById('interactive-unit').innerHTML = unit;
     document.getElementById('interactive-result').innerHTML = interactiveText;
 
@@ -180,7 +185,7 @@ export function loadComparisonInteractive(data) {
   const list = _.pluck(data, 'name');
   $('#interactive-compare').autocomplete({
     source: list,
-    minLength: 2,
+    minLength: 1,
     delay: 500,
     select: function select(e, ui) {
       if (ui.item) {

@@ -73,10 +73,10 @@
     {% endmarkdown %}
   </div>
 
-  <div class="step">
+  <div class="step" id="interactive">
     <div id="compare-pds">
       <h2 class="o-typography-heading2">Interactive: How big is the pension deficit?</h2>
-      <p id="instructions">The scale of pension shortfalls can be difficult to conceive, and requires many complicated assumptions.* This tool should help put the problem in rough context. Use the text box below to search for a <span class="key" id="key-country">country</span> (GDP — how much it produces in a year) or <span class="key" id="key-company">company</span> (market cap — how much it is worth on the stock market) or use the random generator, and compare them with different pension deficits.</p>
+      <p id="instructions">The scale of pension shortfalls is difficult to conceive, and requires many complicated assumptions.* This tool helps put the problem in rough context. Use the text box below to search for a <span class="key" id="key-country">country</span> (GDP — how much it produces in a year) or <span class="key" id="key-company">company</span> (market cap — how much it is worth on the stock market) or use the random generator, and compare them with different pension deficits.</p>
       <div class="interactive-sentence">
         The <span id="publicprivate"><span class="interactive-option" id="interactive-option--public" role="button" aria-pressed="true">public</span> <span class="interactive-option" id="interactive-option--private" role="button" aria-pressed="false">private</span></span> pension deficit in the <span id="usuk"><span class="interactive-option" id="interactive-option--us" role="button" aria-pressed="true">US</span> <span class="interactive-option" id="interactive-option--uk" role="button" aria-pressed="false">UK</span></span> is <br /><span id="interactive-result"></span><span id="thanhack"> than </span><br /><div id="interactive-compare-text">Apple</div><div id="interactive-unit">(market cap)</div>
         <span id="error">The company or country you searched for does not exist.</span>
@@ -85,7 +85,7 @@
       
       <button class="o-buttons o-buttons--standout" id="random">Show me another</button>
       <br />
-      Search for a company or country: <input type="text" placeholder="Type company or country here" id="interactive-compare" />
+      <label for="interactive-compare">Search for a company or country: </label><input type="text" placeholder="Type company or country here" id="interactive-compare" />
       
 
       <div class="sourceline">* Pension deficits are based on latest numbers as of publication, and market caps are as of August 18. UK public pension deficit includes only Local Government Pension Scheme members. UK private pension deficit includes defined benefit pension schemes for the UK's 350 largest listed companies. US public pension deficit includes 564 state and local services systems in the US. It uses Hoover's estimate for pricing liabilities. It does not include the pay-as-you-go social security fund. US private pension deficit includes pension plans sponsored by the largest 1,500 companies by market cap (S&P).<br /><br />Sources: <a href="http://data.worldbank.org/indicator/NY.GDP.MKTP.CD" target="_blank">World Bank</a>, Bloomberg, <a href="http://www.lgpsboard.org/index.php/funding">Local Government Pension Scheme</a>, <a href="http://www.mercer.com/newsroom/june-2016-pension-funding.html">Mercer</a>, <a href="http://www.hoover.org/research/hidden-debt-hidden-deficits-how-pension-promises-are-consuming-state-and-local-budgets">Hoover Institution</a></div>
@@ -95,6 +95,8 @@
   <div class="step">
     {% markdown %}
     Although defined benefit plans are steadily being phased out, they still account for more than half of retirement funds in the developed world. Millions of relatively low-paid public sector workers, typically including teachers, police officers and firefighters — rely on defined benefit pensions for the bulk of their retirement income. So do some of some the largest and longest established corporations on both sides of the Atlantic.
+
+    Pensioners' payouts are guaranteed by law. Companies can only escape them in bankruptcy. But somehow these gaps must be filled. Either workers must be persuaded to accept lower benefits than they have been promised, or funds to fill the gap must come from other sources, meaning less money for companies, for investment, or for public services.
     {% endmarkdown %}
   </div>
 

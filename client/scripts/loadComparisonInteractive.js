@@ -120,7 +120,13 @@ export function loadComparisonInteractive(data) {
     }
 
     const name = document.getElementById('interactive-compare').value;
+    const category = _.findWhere(data, { name }).category;
     const value = _.findWhere(data, { name }).value;
+
+    let unit = '(market cap)';
+    if (category === 'country') {
+      unit = '(GDP)';
+    }
 
     let multiplyFactor = pensionDeficit / value;
     let interactiveText;
@@ -147,6 +153,7 @@ export function loadComparisonInteractive(data) {
     }
 
     document.getElementById('interactive-compare-text').innerHTML = name;
+    document.getElementById('interactive-unit').innerHTML = unit;
     document.getElementById('interactive-result').innerHTML = interactiveText;
 
     changeTweetText();

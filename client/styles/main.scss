@@ -83,6 +83,13 @@ $share-button-size: 38px;
     margin-top: 0;
   }
 
+  h3 {
+    font-family: MetricWeb, sans-serif;
+    margin-top: 2em;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+
   svg {
     overflow: visible;
 
@@ -281,7 +288,7 @@ $share-button-size: 38px;
     }
 
     #instructions {
-      text-align: left; 
+      text-align: left;
       padding: 1em;
       font-family: MetricWeb, sans-serif;
       color: #333;
@@ -388,7 +395,7 @@ $share-button-size: 38px;
 }
 
 @media (max-width: 500px) {
-  
+
   #bond-interactive {
     .bar-graphic {
       width: 90%;

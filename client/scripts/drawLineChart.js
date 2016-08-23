@@ -14,6 +14,10 @@ export function drawLineChart(data, config, windowWidth) {
   const graphHeight = 400;
   const margins = { top: 50, bottom: 50, left: 15, right: 25 };
 
+  chartContainer.append('h3')
+    .attr('class', 'o-typography-heading2')
+    .text(config.head);
+
   chartContainer.append('svg');
 
   const svg = chartContainer.select('svg');
@@ -130,6 +134,6 @@ export function drawLineChart(data, config, windowWidth) {
       label
         .attr('x', xScale(parseDate(columnConfig.mobileLabelPlacement.x)))
         .attr('y', yScale(columnConfig.mobileLabelPlacement.y));
-    }      
+    }
   }
 }

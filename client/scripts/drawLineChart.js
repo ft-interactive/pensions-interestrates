@@ -24,7 +24,13 @@ export function drawLineChart(data, config, windowWidth) {
 
   svg
     .attr('width', graphWidth)
-    .attr('height', graphHeight);
+    .attr('height', graphHeight)
+    .attr('role', 'img')
+    .attr('aria-labelledby', `${config.selectorId}-desc`);
+
+  svg.append('desc')
+    .attr('id', `${config.selectorId}-desc`)
+    .text(config.desc);
 
   const yScale = d3.scaleLinear()
     .domain(config.yScale)
@@ -96,13 +102,19 @@ export function drawLineChart(data, config, windowWidth) {
       .style('fill', '#EFD9BC')
       .style('opacity', 0.7);
 
-    annotationGroup.append('text')
+    const areaLabel = annotationGroup.append('text')
       .attr('text-anchor', 'end')
       .attr('class', 'annotationLabel')
       .attr('x', xScale(parseDate(config.areaLabelPlacement.x)))
       .attr('y', yScale(config.areaLabelPlacement.y))
       .style('fill', '#666')
       .text(config.areaLabel);
+
+    if (windowWidth < config.labelBreakpoint && config.mobileAreaLabelPlacement) {
+      areaLabel
+        .attr('x', xScale(parseDate(config.mobileAreaLabelPlacement.x)))
+        .attr('y', yScale(config.mobileAreaLabelPlacement.y));
+    }
   }
 
   for (let i = 0; i < config.columns.length; i++) {

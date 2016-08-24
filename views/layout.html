@@ -51,6 +51,10 @@
       </article>
     </main>
 
+    {% if flags.onwardjourney %}
+      {% include "includes/onwardjourney.html" %}
+    {% endif %}
+
     {% if flags.comments %}
       {% include "includes/comments.html" %}
     {% endif %}

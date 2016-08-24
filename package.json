@@ -49,7 +49,7 @@
     "node": ">=6"
   },
   "optionalDependencies": {
-    "phantomjs-prebuilt": "^2.1.7",
+    "phantomjs-prebuilt": "2.1.12",
     "selenium-standalone": "5.6.1",
     "nightwatch": "^0.9.8",
     "babel-eslint": "^6.1.2",

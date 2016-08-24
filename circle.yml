@@ -4,7 +4,7 @@ machine:
 
 dependencies:
   pre:
-    - sudo apt-get update; sudo apt-get install nodejs-legacy; sudo apt-get upgrade google-chrome
+    - sudo apt-get update; sudo apt-get install nodejs-legacy; sudo apt-get upgrade google-chrome-stable
   cache_directories:
     - bower_components
     - node_modules
